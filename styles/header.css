@@ -44,11 +44,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: transparent;
-    transition: background-color 0.5s;
+    background-color: rgba(235,235,235,0);
+    transition: background-color 0.7s;
 }
 
 .header-link:hover {
-    background-color: rgb(235,235,235);
+    background-color: rgb(235,235,235,0.5);
     cursor: pointer;
 }
