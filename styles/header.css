@@ -21,6 +21,8 @@
     flex: 1;
     border-style: solid;
     border-color: aqua;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .logo {
