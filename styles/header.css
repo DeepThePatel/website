@@ -1,11 +1,41 @@
 .header {
-    background-color: white;
     height: 55px;
+    background-color: green;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228,228,228);
     display: flex;
+    align-items: center;
+    vertical-align: middle;
     flex-direction: row;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    opacity: 0.85; /*TODO Elements inside change opacity*/
+    z-index: 100;
+}
+
+.left-section {
+    opacity: 1;
+    flex: 1;
+    border-style: solid;
+    border-color: aqua;
+}
+
+.logo {
+    height: 40px;
+    margin-left: 10px;
+}
+
+.right-section {
+    opacity: 1;
+    margin-right: 10px;
+    width: 300px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-color: yellow;
 }
