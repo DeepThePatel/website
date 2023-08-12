@@ -1,45 +1,54 @@
-.header {
-    height: 90px;
-    background-color: rgba(255,255,255, 0.35);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: white;
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
 .left-section {
     flex: 1;
     align-items: center;
+    /* BORDER
+    border-style: solid;
+    border-color: lightblue;
+    */
 }
 
 .logo { 
     height: 40px;
-    margin-left: 10px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.logo-name {
+    display: inline-block;
+    position: absolute;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 .right-section {
-    margin-right: 10px;
-    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
+    /* BORDER
+    border-style: solid;
+    border-color: lightblue;
+    */
 }
 
 .header-link {
-    margin-right: 4px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(235,235,235,0);
+    transition: background-color 0.7s;
+}
+
+.resume-link {
+    padding: 10px -3px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +58,11 @@
 }
 
 .header-link:hover {
+    background-color: rgb(235,235,235,0.5);
+    cursor: pointer;
+}
+
+.resume-link:hover {
     background-color: rgb(235,235,235,0.5);
     cursor: pointer;
 }

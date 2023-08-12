@@ -7,40 +7,38 @@
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
         <!--CSS-->
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/header.css">
     </head>
     <body>
-        <!--Header-->
-        <div class="header">
+        <div style="
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            ">
             <div class="left-section">
-                <img class="logo" src="images/logo.png">
-                <p style="
-                    display: inline-block;
-                    position: absolute;
-                    margin-left: 10px;">
+                <img class="logo" src="images/logo2.png">
+            <!--
+                <p class="logo-name">
                     Deep Patel
                 </p>
+            -->
             </div>
             <div class="right-section">
-                <div class="header-link">
-                    <p onclick="window.location.href='socials.html';">Socials</p>
+                <div class="header-link" onclick="window.location.href='socials.html';">
+                    <p >Socials</p>
                 </div>
-                <div class="header-link">
-                    <p onclick="window.location.href='funkos.html';">Funkos</p>
+                <div class="header-link" onclick="window.location.href='funkos.html';">
+                    <p>Funkos</p>
                 </div>
-                <div class="header-link">
-                    <p onclick="window.location.href='about.html';">About</p>
+                <div class="header-link" onclick="window.location.href='about.html';">
+                    <p>About</p>
+                </div>
+                <div class="resume-link" onclick="window.location.href='about.html';">
+                    <p>Resume</p>
                 </div>
             </div>
-        </div>
-        <!--About Me-->
-        <div class="content">
-            <button onclick="window.location.href='about.html';" style="margin-top: 100px;">
-                Button
-            </button>
         </div>
     </body>
 </html>
