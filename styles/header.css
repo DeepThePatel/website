@@ -8,19 +8,13 @@
 }
 
 .logo { 
+    margin-left: 30px;
     height: 40px;
     margin-top: 5px;
-    margin-left: 30px;
 }
 
-.logo-name {
-    display: inline-block;
-    position: absolute;
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 20px;
-    margin-top: 15px;
-    margin-bottom: 0;
+.logo:hover {
+    cursor: pointer;
 }
 
 .right-section {
