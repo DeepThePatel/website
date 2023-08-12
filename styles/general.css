@@ -1,7 +1,12 @@
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
 body {
     padding-top: 15px;
     padding-left: 10px;
-    padding-right: 50px;
+    padding-right: 40px;
     background-color: rgb(16, 25, 45);
     font-family: 'Inter', Arial;
     /* color: aquamarine; */

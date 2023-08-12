@@ -24,12 +24,9 @@
 }
 
 .right-section {
-    padding-left: 10px;
-    padding-right: 10px;
     display: flex;
-    flex-shrink: 0;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
     /* BORDER
     border-style: solid;
     border-color: lightblue;
@@ -37,32 +34,33 @@
 }
 
 .header-link {
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-right: 20px;
+    border-radius: 2px;
+    display: inline-block;
     flex-direction: row;
-    background-color: rgba(235,235,235,0);
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.7s;
+}
+
+.header-link:hover,
+.resume-section:hover {
+    background-color: rgb(235,235,235,0.5);
+    cursor: pointer;
+}
+
+.resume-section {
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(122,191,172);
+    border-radius: 4px;
     transition: background-color 0.7s;
 }
 
 .resume-link {
-    padding: 10px -3px;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
     background-color: rgba(235,235,235,0);
-    transition: background-color 0.7s;
-}
-
-.header-link:hover {
-    background-color: rgb(235,235,235,0.5);
-    cursor: pointer;
-}
-
-.resume-link:hover {
-    background-color: rgb(235,235,235,0.5);
-    cursor: pointer;
 }

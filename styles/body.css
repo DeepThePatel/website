@@ -1,0 +1,20 @@
+.introduction {
+    margin-top: 40px;
+    margin-left: 30px;
+    color: rgb(226,232,240);
+}
+
+.name {
+    margin: 0;
+    margin-bottom: 15px;
+    width: 263px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.description {
+    margin-top: 0;
+    display: block;
+    width: 680px;
+    font-size: 18px;
+}

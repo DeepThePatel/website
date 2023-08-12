@@ -5,40 +5,42 @@
         <!--Icon-->
         <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
         <!--Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <!--CSS-->
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/body.css">
     </head>
     <body>
+        <!--HEADER-->
         <div style="
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 100px 1fr 100px;
             ">
             <div class="left-section">
                 <img class="logo" src="images/logo2.png">
-            <!--
-                <p class="logo-name">
-                    Deep Patel
-                </p>
-            -->
             </div>
             <div class="right-section">
-                <div class="header-link" onclick="window.location.href='socials.html';">
-                    <p >Socials</p>
-                </div>
-                <div class="header-link" onclick="window.location.href='funkos.html';">
-                    <p>Funkos</p>
-                </div>
                 <div class="header-link" onclick="window.location.href='about.html';">
                     <p>About</p>
                 </div>
-                <div class="resume-link" onclick="window.location.href='about.html';">
-                    <p>Resume</p>
+                <div class="header-link" onclick="window.location.href='experience.html';">
+                    <p>Experience</p>
+                </div>
+                <div class="header-link" onclick="window.location.href='socials.html';">
+                    <p >Socials</p>
                 </div>
             </div>
+            <div class="resume-section">
+                <div class="resume-link" onclick="window.location.href='about.html';">
+                    <p>Resume</p>
+            </div>
+        </div>
+
+        <div class="introduction">
+            <h1 class="name">Deep Patel</h1>
+            <h3 class="description">BSCS and BA Undergraduate Student at the University of South Carolina</h3>
         </div>
     </body>
 </html>
