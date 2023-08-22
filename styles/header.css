@@ -35,7 +35,7 @@
     display: inline-block;
     flex-direction: row;
     background-color: rgba(0,0,0,0);
-    transition: background-color 0.7s;
+    transition: background-color 0.55s;
 }
 
 .header-link:hover,
@@ -51,7 +51,7 @@
     border-style: solid;
     border-color: rgb(122,191,172);
     border-radius: 4px;
-    transition: background-color 0.7s;
+    transition: background-color 0.55s;
 }
 
 .resume-link {
