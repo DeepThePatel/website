@@ -1,7 +1,7 @@
 .content {
     display: grid;
     width: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 200px 270px 120px 200px;
     row-gap: 70px;
 }
 
@@ -30,12 +30,17 @@
 }
 
 .about {
-    margin-top: 50px;
+/*    margin-top: 50px; */
 }
 
-.about-title,
-.experience-title {
+.title {
     color: white;
     font-weight: 800;
     letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.sub-content {
+    color: rgb(148,163,184);
+    line-height: 1.5;
 }
