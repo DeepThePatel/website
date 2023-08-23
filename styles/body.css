@@ -1,20 +1,41 @@
+.content {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 70px;
+}
+
 .introduction {
+    width: 637px;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
-    margin-left: 30px;
-    color: rgb(226,232,240);
+    color: rgb(226,232,240); 
 }
 
 .name {
-    margin: 0;
     margin-bottom: 15px;
-    width: 263px;
     font-size: 48px;
     font-weight: 700;
 }
 
 .description {
     margin-top: 0;
-    display: block;
-    width: 680px;
     font-size: 18px;
+}
+
+.name,
+.description {
+    flex: 2 1 auto;
+}
+
+.about {
+    margin-top: 50px;
+}
+
+.about-title,
+.experience-title {
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
 }

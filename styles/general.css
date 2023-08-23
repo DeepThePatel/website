@@ -4,13 +4,12 @@
 }
 
 body {
-    padding-top: 15px;
-    padding-left: 10px;
-    padding-right: 40px;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 40px;
     background-color: rgb(16, 25, 45);
     font-family: 'Inter', Arial;
     /* color: aquamarine; */
-    color: rgb(122,191,172);
+    color: rgb(100,255,218);
     /* color: rgb(226, 112, 55); orange*/
-
 }
