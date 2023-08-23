@@ -44,7 +44,8 @@
     display: flex;
     align-items: center;
     border-style: solid;
-    border-color: rgb(122,191,172);
+    border-color: rgb(100,255,218);
+    border: 2px solid rgb(100,255,218);
     border-radius: 4px;
     transition: background-color 0.55s;
 }

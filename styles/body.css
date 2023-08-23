@@ -5,6 +5,10 @@
     row-gap: 70px;
 }
 
+.about {
+    width: 641px;
+}
+
 .introduction {
     width: 637px;
     display: flex;
@@ -33,7 +37,6 @@
     color: white;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 40px;
 }
 
 .sub-content {
@@ -44,7 +47,7 @@
 
 .date {
     color: rgb(100,255,218);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     margin-bottom: 3px;
 }
