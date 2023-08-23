@@ -1,7 +1,7 @@
 .content {
     display: grid;
     width: 100%;
-    grid-template-rows: 200px 270px 120px 200px;
+    grid-template-rows: 200px 300px 110px 200px;
     row-gap: 70px;
 }
 
@@ -37,6 +37,14 @@
 }
 
 .sub-content {
+    margin-top: 0;
     color: rgb(148,163,184);
-    line-height: 1.5;
+    line-height: 1.7;
+}
+
+.date {
+    color: rgb(100,255,218);
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 3px;
 }
