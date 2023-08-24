@@ -16,42 +16,49 @@
 .right-section {
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
+    align-items: center;
+    transition: justify-content 10s ease;
+    /*Up for debate*/
+    margin-right: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .right-section {
+      justify-content: center;
+    }
+  }
 
 .header {
     width: 100%;
     display: grid;
-    grid-template-columns: 41px 1fr 100px;
-    column-gap: 20px;
+    grid-template-columns: 1fr 10fr 1fr;
+    column-gap: 40px;
 }
 
 .header-link {
-    margin-left: 20px;
+    margin-left: 30px;
+    border-radius: 2px;
 }
 
-.header-link,
 .resume-link {
     padding-left: 18px;
     padding-right: 18px;
-    border-radius: 2px;
-    flex-direction: row;
+    border-style: solid;
+    border-color: rgb(100,255,218);
+    border: 2px solid rgb(100,255,218);
+    border-radius: 4px;
+    transition: background-color 0.55s, border-radius 0s;
     background-color: rgba(0,0,0,0);
     transition: background-color 0.55s;
 }
 
 .resume-section {
-    display: flex;
+    display: inline-flex;
+    justify-content: flex-end;
     align-items: center;
-    border-style: solid;
-    border-color: rgb(100,255,218);
-    border: 2px solid rgb(100,255,218);
-    border-radius: 4px;
-    transition: background-color 0.55s;
 }
 
-.header-link:hover,
-.resume-section:hover {
+.resume-link:hover {
     background-color: rgb(235,235,235,0.5);
     cursor: pointer;
 }
