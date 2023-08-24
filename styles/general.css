@@ -13,3 +13,15 @@ body {
     color: rgb(100,255,218);
     /* color: rgb(226, 112, 55); orange*/
 }
+
+.footer {
+  color: rgb(148,163,184);
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+.hr {
+  height: 1px;
+  background-color: rgb(148,163,184);
+  border: none;
+}

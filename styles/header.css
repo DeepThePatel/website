@@ -18,15 +18,13 @@
     justify-content: flex-end;
     align-items: center;
     transition: justify-content 10s ease;
-    /*Up for debate*/
-    margin-right: 30px;
 }
 
 @media screen and (max-width: 600px) {
     .right-section {
       justify-content: center;
     }
-  }
+}
 
 .header {
     width: 100%;
