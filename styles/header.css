@@ -35,7 +35,14 @@
 
 .header-link {
     margin-left: 30px;
-    border-radius: 2px;
+    border-radius: 20px;
+    padding: 6px 6px 3px 6px;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.55s, border-radius 0s;
+}
+
+.header-link:hover {
+    background-color: rgba(235,235,235,0.5);
 }
 
 .resume-link {
@@ -45,9 +52,13 @@
     border-color: rgb(100,255,218);
     border: 2px solid rgb(100,255,218);
     border-radius: 4px;
-    transition: background-color 0.55s, border-radius 0s;
     background-color: rgba(0,0,0,0);
-    transition: background-color 0.55s;
+    transition: background-color 0.55s, border-radius 0s;
+}
+
+.resume-link:hover {
+    background-color: rgba(235,235,235,0.5);
+    cursor: pointer;
 }
 
 .resume-section {
@@ -56,9 +67,6 @@
     align-items: center;
 }
 
-.resume-link:hover {
-    background-color: rgb(235,235,235,0.5);
-    cursor: pointer;
-}
+
 
 
