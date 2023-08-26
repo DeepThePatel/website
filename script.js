@@ -1,12 +1,12 @@
 //RESUME
 document.addEventListener("DOMContentLoaded", function () {
-  const pdfContainer = document.getElementById("pdfContainer");
+  const RESUME_LINK = document.getElementById("RESUME_LINK");
 
-  pdfContainer.addEventListener("click", function () {
-    const pdfUrl = "Resume.pdf";
+  RESUME_LINK.addEventListener("click", function () {
+    const resumeUrl = "Resume.pdf";
     //Open PDF in new window
-    window.open(pdfUrl, "_blank");
+    window.open(resumeUrl, "_blank");
   });
 });
 
-const flexContainer = document.querySelector(".right-section");
+const pdfContainer = document.querySelector(".resume-section");

@@ -30,11 +30,12 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-    column-gap: 40px;
+    column-gap: 30px;
     width: 100%;
 }
 
-.header-link {
+.github-link,
+.instagram-link {
     margin-left: 30px;
     border-radius: 25px;
     padding: 10px 10px 7px 10px;
@@ -42,7 +43,8 @@
     transition: background-color 0.55s, border-radius 0s;
 }
 
-.header-link:hover {
+.github-link:hover,
+.instagram-link:hover {
     background-color: rgba(235,235,235,0.5);
 }
 
