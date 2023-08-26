@@ -20,7 +20,7 @@
     transition: justify-content 0.5s ease;
 }
 
-@media screen and (max-width: 497px) {
+@media screen and (max-width: 467px) {
     .right-section {
       justify-content: center;
     }
