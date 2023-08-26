@@ -2,7 +2,6 @@
     display: grid;
     width: 100%;
     grid-template-rows: 200px 300px 110px 200px;
-    max-width: 1200px;
     row-gap: 70px;
 }
 
@@ -18,8 +17,7 @@
 
 .introduction {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     margin-top: 40px;
     color: rgb(226,232,240); 
 }
@@ -47,6 +45,7 @@
 }
 
 .sub-content {
+    max-width: 637px;
     margin-top: 0;
     color: rgb(148,163,184);
     line-height: 1.7;
