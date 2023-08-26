@@ -17,10 +17,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    transition: justify-content 10s ease;
+    transition: justify-content 0.5s ease;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 497px) {
     .right-section {
       justify-content: center;
     }
