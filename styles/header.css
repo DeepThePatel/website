@@ -31,12 +31,13 @@
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     column-gap: 40px;
+    width: 100%;
 }
 
 .header-link {
     margin-left: 30px;
-    border-radius: 20px;
-    padding: 6px 6px 3px 6px;
+    border-radius: 25px;
+    padding: 10px 10px 7px 10px;
     background-color: rgba(0,0,0,0);
     transition: background-color 0.55s, border-radius 0s;
 }

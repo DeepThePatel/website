@@ -2,15 +2,22 @@
     display: grid;
     width: 100%;
     grid-template-rows: 200px 300px 110px 200px;
+    max-width: 1200px;
     row-gap: 70px;
 }
 
+@media screen and (max-width: 768px) {
+    .content {
+        grid-template-rows: 1fr;
+    }
+}
+
 .about {
-    width: 641px;
+    width: 100%;
 }
 
 .introduction {
-    width: 637px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
