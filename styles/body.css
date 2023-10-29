@@ -94,7 +94,7 @@ a:hover {
 .project-card:hover {
     background-color: rgba(100,255,218,0.1);
     cursor: pointer;
-    transform: translateY(-8px);
+    transform: translateY(-9px);
 }
 
 .project-card:hover .project-title {
