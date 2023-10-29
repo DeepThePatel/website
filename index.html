@@ -15,6 +15,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js" defer></script>
+        <!--Open other webpages-->
+        <script>
+            function openHTML(destination) {
+                window.location.href = destination;
+            }
+        </script>
     </head>
     <body>
         <!--HEADER-->
@@ -43,6 +49,7 @@
                 <h3 class="description">BSCS and BA Undergraduate Student at the University of South Carolina</h3>
             </div>
 
+            <!--About section-->
             <div class="about">
                 <h5 class="title">
                    ABOUT
@@ -55,6 +62,7 @@
                 </p>
             </div>
 
+            <!--Experience section-->
             <div class="experience">
                 <h5 class="title">
                    EXPERIENCE
@@ -67,11 +75,46 @@
                 </p>
             </div>
 
-            <div class="projects">
+            <!--Projects section-->
+            <div>
                 <h5 class="title">
                    PROJECTS
                 </h5>
-                <p>Under construction. Check out my Resume for projects I have completed.</p>
+                <div class="project-cards">
+                    <div class="project-card" onclick="openHTML('580project.html')">
+                        <div>
+                            <img class="project-image" src="/images/380game.png">
+                        </div>
+                        <div>
+                            <p class="project-title">Game Design Project &#8599</p>
+                        </div>
+                        <div>
+                            <p class="project-description">Game where player must navigate the map and find all the keys</p>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="openHTML('fantasy-rescue.html')">
+                        <div>
+                            <img class="project-image" src="/images/fantasy-rescue.png">
+                        </div>
+                        <div>
+                            <p class="project-title">Fantasy Rescue &#8599</p>
+                        </div>
+                        <div>
+                            <p class="project-description">Game where player must overcome obstacle courses and find all the keys</p>
+                        </div>
+                    </div>
+                    <div class="project-card" onclick="openHTML('camp-system.html')">
+                        <div>
+                            <img class="project-image" src="/images/camp-system.png">
+                        </div>
+                        <div>
+                            <p class="project-title">Camp System &#8599</p>
+                        </div>
+                        <div>
+                            <p class="project-description">Terminal-based summer camp application</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <hr class="hr">
