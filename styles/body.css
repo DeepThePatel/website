@@ -97,6 +97,7 @@ a:hover {
 .list {
     line-height: 35px;
     color: rgb(148,163,184);
+    padding-left: 12px;
 }
 
 .gallery {
