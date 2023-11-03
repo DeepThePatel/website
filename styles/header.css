@@ -45,7 +45,7 @@
 
 .github-link:hover,
 .instagram-link:hover {
-    background-color: rgba(235,235,235,0.3);
+    background-color: rgba(235,235,235,0.4);
 }
 
 .resume-link {
@@ -60,7 +60,7 @@
 }
 
 .resume-link:hover {
-    background-color: rgba(235,235,235,0.3);
+    background-color: rgba(235,235,235,0.4);
     cursor: pointer;
 }
 
