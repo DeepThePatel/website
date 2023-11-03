@@ -1,3 +1,5 @@
+/*TODO split different webpage CSS into separate CSS files*/
+
 .content {
     display: grid;
    /* width: 100%; */
@@ -9,11 +11,9 @@
     .content {
         grid-template-rows: 1fr 2fr;
     }
-}
 
-@media (max-width: 768px) {
     .fantasy-rescue-image {
-        width: 30%;
+        width: 100%;
     }
 }
 
@@ -101,20 +101,13 @@ a:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    align-items: center;
-    justify-content: center;
 }
 
 .gallery img {
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically within the grid item */
-    align-items: center; /* Center content horizontally within the grid item */
-    text-align: center;
 }
 
 
@@ -127,9 +120,6 @@ a:hover {
     gap: 20px;
 }
 .project-card {
-    border-style: solid;
-    border-width: 0px;
-    border-color: rgb(100,255,218);
     border-radius: 8px;
     background-color: rgba(110, 113, 223, 0);
     transition: background-color 0.45s, transform 0.3s ease;
