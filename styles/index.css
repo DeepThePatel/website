@@ -1,0 +1,75 @@
+.content {
+    display: grid;
+    grid-template-rows: 200px 300px 110px 475px;
+    row-gap: 70px;
+}
+
+/*Description under name*/
+.description {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.name,
+.description {
+    flex: 2 1 auto;
+}
+
+.about {
+    width: 100%;
+}
+
+.experience-date {
+    color: rgb(100,255,218);
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    border-radius: 8px;
+    background-color: rgba(110, 113, 223, 0);
+    transition: background-color 0.45s, transform 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: rgba(100,255,218,0.1);
+    cursor: pointer;
+    transform: translateY(-9px);
+}
+
+.project-card:hover .project-title {
+    color: rgba(100,255,218,0.9);
+    transition: color 0.45s;
+}
+
+.project-image {
+    height: auto;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    margin-top: 5px;
+    padding: 5px 13px;
+}
+
+.project-description {
+    padding: 8px 12px;
+    margin: 0;
+    margin-top: 5px;
+    padding-bottom: 50px;
+    font-size: 16px;
+    color: rgb(148,163,184);
+}

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
 const pdfContainer = document.querySelector(".resume-section");
 
-//MODAL
+//FANTASY RESCUE MODAL
 const gallery = document.querySelector(".gallery");
 const modal = document.getElementById("myModal");
 const modalImage = document.getElementById("modalImage");

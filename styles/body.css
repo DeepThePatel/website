@@ -1,12 +1,6 @@
 /*TODO split different webpage CSS into separate CSS files*/
 
-.content {
-    display: grid;
-   /* width: 100%; */
-    grid-template-rows: 200px 300px 110px 475px;
-    row-gap: 70px;
-}
-
+/*Responsive Layout*/
 @media screen and (max-width: 768px) {
     .content {
         grid-template-rows: 1fr 2fr;
@@ -17,10 +11,6 @@
     }
 }
 
-.about {
-    width: 100%;
-}
-
 .introduction {
     width: 100%;
     display: block;
@@ -28,46 +18,26 @@
     color: rgb(226,232,240); 
 }
 
+/*Webpage title*/
 .name {
     margin-bottom: 0px;
     font-size: 48px;
     font-weight: 700;
 }
 
-.description {
-    margin-top: 15px;
-    font-size: 18px;
-}
-
-.name,
-.description {
-    flex: 2 1 auto;
-}
-
+/*Subheading titles*/
 .title {
-    color: white;
+    color: whitet;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
+/*Subheading content*/
 .sub-content {
     max-width: 637px;
     margin-top: 0;
     color: rgb(148,163,184);
     line-height: 1.7;
-}
-
-.subheadings {
-    font-size: 20px;
-    margin-top: 30px;
-    color: rgba(255, 255, 255,9.5);
-}
-
-.experience-date {
-    color: rgb(100,255,218);
-    font-weight: 500;
-    font-size: 12px;
-    margin-bottom: 3px;
 }
 
 .date {
@@ -94,57 +64,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/*Project Section*/
-
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-.project-card {
-    border-radius: 8px;
-    background-color: rgba(110, 113, 223, 0);
-    transition: background-color 0.45s, transform 0.3s ease;
-}
-
-.project-card:hover {
-    background-color: rgba(100,255,218,0.1);
-    cursor: pointer;
-    transform: translateY(-9px);
-}
-
-.project-card:hover .project-title {
-    color: rgba(100,255,218,0.9);
-    transition: color 0.45s;
-}
-
-.project-image {
-    height: auto;
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 2px;
-}
-
 .project-link {
     padding-bottom: 120px;
     margin-top: 10px;
-}
-
-.project-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-    margin-top: 5px;
-    padding: 5px 13px;
-}
-
-.project-description {
-    padding: 8px 12px;
-    margin: 0;
-    margin-top: 5px;
-    padding-bottom: 50px;
-    font-size: 16px;
-    color: rgb(148,163,184);
 }
