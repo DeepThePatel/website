@@ -1,3 +1,10 @@
+/*Close button for fantasy-rescue modal*/
+@media screen and (max-width: 1220px) {
+    .close {
+        display: none;
+    }
+}
+
 .list {
     line-height: 35px;
     color: rgb(148,163,184);
