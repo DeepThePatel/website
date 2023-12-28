@@ -35,7 +35,8 @@
 }
 
 .github-link,
-.instagram-link {
+.instagram-link,
+.linkedin-link {
     margin-left: 30px;
     border-radius: 25px;
     padding: 10px 10px 7px 10px;
@@ -44,7 +45,8 @@
 }
 
 .github-link:hover,
-.instagram-link:hover {
+.instagram-link:hover,
+.linkedin-link:hover {
     background-color: rgba(235,235,235,0.4);
 }
 
