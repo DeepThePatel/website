@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deep Patel</title>
+        <!--Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+        <!--Fonts-->
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/body.css">
+        <link rel="stylesheet" href="styles/ai.css">
+        <!--JavaScript-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!--HEADER-->
+        <div class="header">
+            <div class="left-section">
+                <img class="logo" src="images/logo2.png" onclick="window.location.href='index.html';">
+            </div>
+            <div class="right-section">
+                <div class="github-link">
+                      <a href="https://github.com/DeepThePatel" target="_blank"><img src="images/github.png" title="GitHub" width="30px" height="30px"></a>
+                </div>
+                <div class="instagram-link">
+                        <a href="https://www.instagram.com/dc4.deep/" target="_blank"><img src="images/instagram.png" title="Instagram" width="30px" height="30px"></a>
+                </div>
+            </div>
+            <div id="pdfContainer" class="resume-section">
+                <div class="resume-link" onclick="window.location.href='Resume.pdf';">
+                    <p>Resume</p>
+                </div>
+            </div>
+        </div>
+        <div class="introduction">
+            <p class ="name" style="margin-top:72px;">Artifical Intelligence Project</p>
+            <br>
+            <p class="date">FALL 2023</p>
+            <br>
+            <br>
+        </div>
+
+        <!--RESOURCES-->
+        <div>
+            <h5 class="title">RESOURCES</h5>
+            <p class="project-link" style="padding-bottom: 0px;"><a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo" target="_blank" rel="noopener noreferrer" title="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo">GitHub Repository &#8599</a></p>
+            <a class="project-link-2" onclick="window.open('ai_report.pdf', '_blank');" style="padding-bottom: 0px;">View Full Project Report &#8599</a>
+            <p class="project-link"><a href="https://www.youtube.com/watch?v=l0urnBij-W0&feature=youtu.be" target="_blank" rel="noopener noreferrer" title="https://www.youtube.com/watch?v=l0urnBij-W0&feature=youtu.be">Video Demo &#8599</a></p>
+        </div>
+
+        <!--Overview-->
+        <div style="margin-bottom: 90px;">
+            <h5 class="title">OVERVIEW</h5>
+            <p class="sub-content">
+                This is a project I completed in my Artificial Intelligence class. Over the course of the semester, I learned about the logisitics of AI and was to use that knowledge to create a model that would use machine learning/AI to solve an issue.
+                <br>
+                <br>
+                The problem that I chose was to look at how machine learning could be used in quality control in the manufacturing industry. To tackle this problem, I acquired a <a href="https://www.kaggle.com/datasets/concaption/pepsico-lab-potato-quality-control" style="text-decoration: underline;">dataset</a> online which consisted of images of defective and non-defective potato chips. These images were split into Train and Test directories, and further into Defective and Non-Defective subdirectories. Using this dataset, I was able to create a model that implemented binary classification using the PyTorch and Keras libraries. The purpose of using two different libraries was to compare the efficiency and viability of the two.
+                <br>
+                <br>
+                <br>
+                Below are the results of my research. Click the images to enlargen.
+            </p>
+        </div>
+
+        <!--Body-->
+        <!--Modal-->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <div>
+            <h5 class="title">CHATBOT</h5>
+            <p class="sub-content" style="font-style: italic;">This example shows how to run the model with both libraries in the chatbot, random <a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo/blob/main/code/chitchat.txt" style="text-decoration: underline;">chitchat</a> has also been implemented. Chatbot can be found <a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo/blob/main/code/chatbot.ipynb" style="text-decoration: underline;">here.</a></p>
+            <img class="img img-modal" src="images/ai-images/current-chatbot-example.png">
+            <br>
+            <br>
+            <h5 class="title">KERAS</h5>
+            <p class="sub-content" style="font-style: italic;">Model checkpoints were used to save the model to mitigate retraining and save time when called in the chatbot. The epoch with the best accuracy is saved to the checkpoint file.</p>
+            <img class="img img-modal" src="images/ai-images/keras-train.png">
+            <br>
+            <br>
+            <img class="img img-modal" src="images/ai-images/keras-plot.png">
+            <br>
+            <br>
+            <img class="img img-modal" src="images/ai-images/keras-table.png">
+            <br>
+            <br>
+            <h5 class="title">PYTORCH</h5>
+            <img class="img img-modal" src="images/ai-images/pytorch-plot.png">
+            <br>
+            <br>
+            <img class="img img-modal" src="images/ai-images/pytorch-table.png">
+            <br>
+            <br>
+            <p class="sub-content" style="font-style: italic;">After fixing an error where the model was being evaluated twice during training, my model improved in runtime but showed no significant change in accuracy.</p>
+            <img class="img img-modal" src="images/ai-images/pytorch-table2.png">
+            <br>
+            <br>
+            <h5 class="title">COMPARISON WITH GOOGLE BARD</h5>
+            <p class="sub-content" style="font-style: italic;">The first 10 images from the Test/Defective and Test/Nondefective directories were used.</p>
+            <img class="img img-modal" src="images/ai-images/bard-results.png" style="margin-bottom: 80px;">
+        </div>
+
+
+        <hr class="hr">
+        <div class="footer" style="font-size: 12px;">
+            <p style=>
+                <span style="color: rgb(100,255,218);">Email:</span> deepkalpana1@aol.com
+            </p>
+            <p>
+                This website was published using Github Pages
+            </p>
+        </div>
+    </body>
+</html>

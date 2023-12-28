@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 200px 300px 110px 475px;
     row-gap: 70px;
+    margin-bottom: 80px;
 }
 
 /*Description under name*/

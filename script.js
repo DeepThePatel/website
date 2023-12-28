@@ -11,25 +11,58 @@ document.addEventListener("DOMContentLoaded", function () {
  
 const pdfContainer = document.querySelector(".resume-section");
 
-//FANTASY RESCUE MODAL
+
+
+//MODALS
+const galleryImages = document.querySelectorAll(".gallery img");
+const galleryModal = document.getElementById("myModal");
+const galleryModalImage = document.getElementById("modalImage");
+const galleryCloseBtn = galleryModal.querySelector(".close");
+
+const images = document.querySelectorAll(".img-modal");
 const gallery = document.querySelector(".gallery");
 const modal = document.getElementById("myModal");
 const modalImage = document.getElementById("modalImage");
 const closeBtn = document.querySelector(".close");
 
-gallery.addEventListener("click", function (e) {
-    if (e.target.tagName === "IMG") {
-        modal.style.display = "block";
-        modalImage.src = e.target.src;
+//Fantasy Rescue Modal
+galleryImages.forEach(function (image) {
+    image.addEventListener("click", function () {
+        galleryModal.style.display = "block";
+        galleryModalImage.src = this.src;
+    });
+});
+
+galleryCloseBtn.addEventListener("click", function () {
+    galleryModal.style.display = "none";
+});
+
+galleryModal.addEventListener("click", function (e) {
+    if (e.target === galleryModal) {
+        galleryModal.style.display = "none";
     }
 });
 
-closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
+//AI Modal
+const imgModalImages = document.querySelectorAll(".img-modal");
+const imgModalModal = document.getElementById("myModal");
+const imgModalModalImage = document.getElementById("modalImg");
+const imgModalCloseBtn = imgModalModal.querySelector(".close");
+
+imgModalImages.forEach(function (image) {
+    image.addEventListener("click", function () {
+        imgModalModal.style.display = "block";
+        imgModalModalImage.src = this.src;
+    });
 });
 
-modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
+imgModalCloseBtn.addEventListener("click", function () {
+    imgModalModal.style.display = "none";
+});
+
+imgModalModal.addEventListener("click", function (e) {
+    if (e.target === imgModalModal) {
+        imgModalModal.style.display = "none";
     }
 });
+
