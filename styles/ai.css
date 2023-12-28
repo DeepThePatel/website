@@ -2,6 +2,10 @@
     width: 50%;
 }
 
+.img:hover {
+    cursor: pointer;
+}
+
 .modal {
     display: none;
     position: fixed;

@@ -57,18 +57,18 @@
         <div style="margin-bottom: 90px;">
             <h5 class="title">OVERVIEW</h5>
             <p class="sub-content">
-                This is a project I completed in my Artificial Intelligence class. Over the course of the semester, I learned about the logisitics of AI and was to use that knowledge to create a model that would use machine learning/AI to solve an issue.
+                This is a project I completed in my Artificial Intelligence class. Over the course of the semester, I learned about the logisitics of AI and was to use that knowledge to create a model that would use machine learning/AI to solve an issue that I was to come up with.
                 <br>
                 <br>
-                The problem that I chose was to look at how machine learning could be used in quality control in the manufacturing industry. To tackle this problem, I acquired a <a href="https://www.kaggle.com/datasets/concaption/pepsico-lab-potato-quality-control" style="text-decoration: underline;">dataset</a> online which consisted of images of defective and non-defective potato chips. These images were split into Train and Test directories, and further into Defective and Non-Defective subdirectories. Using this dataset, I was able to create a model that implemented binary classification using the PyTorch and Keras libraries. The purpose of using two different libraries was to compare the efficiency and viability of the two.
+                The problem that I chose was to look at how effectively machine learning could be used in quality control in the manufacturing industry. To tackle this problem, I acquired a <a href="https://www.kaggle.com/datasets/concaption/pepsico-lab-potato-quality-control" style="text-decoration: underline;">dataset</a> online which consisted of images of defective and non-defective potato chips. These images were split into Train and Test directories and further into Defective and Non-Defective subdirectories. Using this dataset, I was able to create a model that implemented binary classification using the PyTorch and Keras libraries. The purpose of using two different libraries was to compare the efficiency and viability of the two.
                 <br>
                 <br>
-                <br>
-                Below are the results of my research. Click the images to enlargen.
+                Below are the results of my research.
             </p>
         </div>
 
         <!--Body-->
+
         <!--Modal-->
         <div id="myModal" class="modal">
             <span class="close">&times;</span>
@@ -77,7 +77,7 @@
 
         <div>
             <h5 class="title">CHATBOT</h5>
-            <p class="sub-content" style="font-style: italic;">This example shows how to run the model with both libraries in the chatbot, random <a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo/blob/main/code/chitchat.txt" style="text-decoration: underline;">chitchat</a> has also been implemented. Chatbot can be found <a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo/blob/main/code/chatbot.ipynb" style="text-decoration: underline;">here.</a></p>
+            <p class="sub-content" style="font-style: italic;">Chatbot is rule-based and can be found <a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo/blob/main/code/chatbot.ipynb" style="text-decoration: underline;">here.</a> This example shows how to run the model with both libraries in the chatbot, random <a href="https://github.com/DeepThePatel/CSCE580-Fall2023-DeepPatel-Repo/blob/main/code/chitchat.txt" style="text-decoration: underline;">chitchat</a> has also been implemented. Click the images to enlargen.</p>
             <img class="img img-modal" src="images/ai-images/current-chatbot-example.png">
             <br>
             <br>
@@ -104,8 +104,13 @@
             <br>
             <br>
             <h5 class="title">COMPARISON WITH GOOGLE BARD</h5>
-            <p class="sub-content" style="font-style: italic;">The first 10 images from the Test/Defective and Test/Nondefective directories were used.</p>
+            <p class="sub-content" style="font-style: italic;">The first 10 images from the Test/Defective and Test/Nondefective directories were used. The query "Is this chip defective?" was used.</p>
             <img class="img img-modal" src="images/ai-images/bard-results.png" style="margin-bottom: 80px;">
+        </div>
+
+        <div style="margin-bottom: 80px;">
+            <h5 class="title">CONCLUSIVE REMARKS</h5>
+            <p class="sub-content">As a result of my research, I found that using the PyTorch library return a higher accuracy of about 3%, but with a slower runtime of about 5 minutes. So in conclusion, it would be in a manufacturer's best interest to utilize the PyTorch library when using AI for quality control since accuracy is the most important factor. However, if runtime is an issue, then performing the classification using Keras would be the better option.</p>
         </div>
 
 
