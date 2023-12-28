@@ -1,6 +1,6 @@
 .content {
     display: grid;
-    grid-template-rows: 200px 300px 110px 475px;
+    grid-template-rows: auto auto auto 1fr;
     row-gap: 70px;
     margin-bottom: 80px;
 }
@@ -29,7 +29,7 @@
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 .project-card {
