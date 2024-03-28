@@ -1,0 +1,21 @@
+.list {
+    color: white;
+}
+
+li {
+    /*color: rgb(100,255,218); */
+    color: #cbcbcb;
+    font-weight: 400;
+    line-height: 2.5;
+}
+
+.list-note {
+    color: rgb(148,163,184);
+}
+
+.author {
+    max-width: 637px;
+    margin-top: 0;
+    color: rgb(148,163,184);
+    line-height: 0.8;
+}
