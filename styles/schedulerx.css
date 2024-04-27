@@ -9,6 +9,23 @@ li {
     line-height: 2.5;
 }
 
+.list li {
+    list-style-type: disc; /* Default list style */
+    color: #cbcbcb;
+    font-weight: 400;
+    line-height: 2.5;
+}
+
+.list .indented-list {
+    list-style-type: none; /* Remove default bullets */
+    margin-left: 20px;
+}
+
+.list .indented-list::before {
+    content: "- ";
+    margin-right: 5px;
+}
+
 .list-note {
     color: rgb(148,163,184);
 }
