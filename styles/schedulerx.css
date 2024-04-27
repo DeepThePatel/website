@@ -19,3 +19,10 @@ li {
     color: rgb(148,163,184);
     line-height: 0.8;
 }
+
+.responsive-video {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    margin-top: 20px;
+    max-width: 480px;
+}
