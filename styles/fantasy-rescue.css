@@ -6,9 +6,15 @@
 }
 
 .list {
-    line-height: 35px;
+    color: white;
+}
+
+li {
+    /*color: rgb(100,255,218); */
+    color: #cbcbcb;
+    font-weight: 400;
+    line-height: 1.7;
     color: rgb(148,163,184);
-    padding-left: 12px;
 }
 
 .gallery {

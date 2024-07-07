@@ -1,3 +1,13 @@
+.list {
+    color: white;
+}
+
+li {
+    color: rgb(148,163,184);
+    line-height: 1.7;
+    max-width: 600px;
+}
+
 .resources {
     margin-bottom: 110px;
 }

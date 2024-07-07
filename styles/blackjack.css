@@ -1,0 +1,29 @@
+.list {
+    color: white;
+}
+
+li {
+    color: rgb(148,163,184);
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.code {
+    color: white;
+    font-weight: 400;
+    background-color: rgba(148,163,184, 0.2);
+    border-radius: 9px;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.code-small {
+    color: white;
+    font-weight: 400;
+    background-color: rgba(148,163,184, 0.2);
+    border-radius: 9px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

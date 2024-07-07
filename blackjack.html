@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deep Patel</title>
+        <!--Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+        <!--Fonts-->
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/body.css">
+        <link rel="stylesheet" href="styles/blackjack.css">
+        <!--JavaScript-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!--HEADER-->
+        <div class="header">
+            <div class="left-section">
+                <img class="logo" src="images/logo2.png" onclick="window.location.href='index.html';">
+            </div>
+            <div class="right-section">
+                <div class="github-link">
+                      <a href="https://github.com/DeepThePatel" target="_blank"><img src="images/github.png" title="GitHub" width="30px" height="30px"></a>
+                </div>
+                <div class="linkedin-link">
+                    <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank"><img src="images/linkedin.png" title="LinkedIn" width="30px" height="30px"></a>
+                </div>
+                <div class="instagram-link">
+                        <a href="https://www.instagram.com/dc4.deep/" target="_blank"><img src="images/instagram.png" title="Instagram" width="30px" height="30px"></a>
+                </div>
+                <div id="pdfContainer" class="resume-section">
+                    <div class="resume-link" onclick="window.location.href='Resume_DeepPatel.pdf';">
+                        <p>Resume</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="introduction">
+            <p class ="name" style="margin-top:72px;">Blackjack</p>
+            <br>
+            <p class="date" style="margin-bottom:30px;">SUMMER 2024</p>
+        </div>
+
+        <!--Resources-->
+        <h5 class="title" style="margin-top: 62px;">RESOURCES</h5>
+        
+        <p class="project-link" style="padding-bottom: 0px; margin-bottom: 92px;">
+            <a href="https://github.com/DeepThePatel/Blackjack/releases/tag/v1.2.1" target="_blank" rel="noopener noreferrer" title="https://github.com/DeepThePatel/Blackjack/releases/tag/v1.2.1">Blackjack v1.2.1 &#8599</a>
+            <br>
+            <br>
+            <a href="https://github.com/DeepThePatel/Blackjack" target="_blank" rel="noopener noreferrer" title="https://github.com/DeepThePatel/Blackjack">GitHub Repository &#8599</a>
+        </p>
+
+        <!--Overview-->
+        <div style="margin-bottom: 90px;">
+            <h5 class="title" style="margin-bottom: -10px; margin-top: 30px">LEARNING OUTCOMES</h5>
+            <br>
+            <ul>
+                <li>How to create a .NET program</li>
+                <li>How to use the Tuple data structure</li>
+                <li>The use of C# Dictionaries</li>
+                <li>The use of methods to simplify code</li>
+                <li>Returning multiple values from a method</li>
+                <li>Use of the VSCode debugging tool</li>
+                <li>Data parsing</li>
+                <li>Program flow control</li>
+            </ul>
+            <br>
+            <br>
+            
+            <h5 class="title">OVERVIEW</h5>
+            <p class="sub-content">
+                Console-based blackjack card game developed in the .NET framework and programmed in C#.
+                <br>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px;">GAMEPLAY</h5>
+                <br>
+                <p class="sub-content">To launch the game:</p>
+                <ul class="list">
+                    <li>Clone the project into a folder on your computer</li>
+                    <li>Open the project folder in a new terminal in VSCode <span class="code">( Ctrl + Shift + ` )</span></li>
+                    <li>Run <span class="code">dotnet build</span></li>
+                    <li>Then <span class="code">dotnet run</span></li>
+                </ul>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px;">MAIN MENU</h5>
+                <br>
+                <p class="sub-content">Upon entry, player will be notified of their initial balance of $5000.</p>
+                <p class="sub-content">The player will have the choice to pick from three (3) different casinos:</p>
+                <ul class="list">
+                    <li>Las Vegas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Min. $50)</li>
+                    <li>Monte Carlo&nbsp;&nbsp;&nbsp;&nbsp;(Min. $200)</li>
+                    <li>Dubai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Min. $200)</li>
+                </ul>
+                <p class="sub-content">Player will also have the option to quit <span class="code-small">(Q)</span> the game.</p>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px;">INSIDE THE CASINO</h5>
+                <br>
+                <p class="sub-content">Once the preferred casino is selected, player is prompted to enter a bet within the accepted value range or to exit <span class="code-small">(Q)</span> the casino.</p>
+                <p class="sub-content">Once a valid bet is placed, the program begins to deal the player and dealer their hands in an alternating fashion.</p>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px; margin-top: 30px;">INSURANCE</h5>
+                <br>
+                <p class="sub-content">Once the cards are dealt and in the event that the dealer's first card is an Ace (where the player does NOT have a blackjack), the player has the ability to bet <span class="code-small">Insurance</span>.</p>
+                <ul>
+                    <li>The player is able to bet up to half of their original bet or <span class="code-small">0</span> if they do not wish to take insurance.</li>
+                    <li>If insurance is taken and the player wins, they will receive their original bet and 2x their insurance.</li>
+                    <li>If insurance is taken and the player loses, they will lose their original bet and their insurance.</li>
+                    <li>If insurance is not taken, the game will continue.</li>
+                </ul>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px; margin-top: 30px;">BLACKJACK</h5>
+                <br>
+                <p class="sub-content">Before the program continues, it checks to see whether the player or the dealer have a blackjack.</p>
+                <ul>
+                    <li>If either the player or the dealer have a blackjack, the player will be notified and the round will end.</li>
+                    <li>In the event that both the player and the dealer have a blackjack, the program will notify the player that there is a <span class="code-small">Push</span>.</li>
+                </ul>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px; margin-top: 30px;">THE PLAYER'S TURN</h5>
+                <br>
+                <p class="sub-content">Once the cards are dealt, player is shown their hand, the total of their hand, and the dealer's hand.</p>
+                <p class="sub-content">They are then given the option to <span class="code-small">Hit</span> or <span class="code-small">Double</span> or <span class="code-small">Stay</span>. (Players may only double down once on their first turn. Players will NOT be able to double down after hitting a card)</p>
+                <p class="sub-content"><span class="code-small">Hit</span> : A random card is drawn into the player's hand</p>
+                <p class="sub-content">If the player does not bust:</p>
+                <ul>
+                    <li>The sum of the player's hand is updated</li>
+                    <li>Player is given the option to <span class="code-small">Hit</span> or <span class="code-small">Stay</span></li>
+                    <li>This process is repeated until the player busts or decides to stay</li>
+                </ul>
+                <p class="sub-content">If the player busts:</p>
+                <ul>
+                    <li>Player is notified they busted along with the total of their hand</li>
+                    <li>Player's balance is updated</li>
+                    <li>Player is then redirected to beginning where they can choose to bet again or exit the casino</li>
+                </ul>
+                <p class="sub-content"><span class="code-small">Double</span> : Player will be given the opportunity to double their bet and draw only one (1) card.</p>
+                <p class="sub-content"><span class="code-small">Stay</span> : Player does not draw a card and the program proceeds to play the dealer's hand</p>
+                <br>
+
+                <h5 class="title" style="margin-bottom: -10px; margin-top: 30px;">THE DEALER'S TURN</h5>
+                <br>
+                <p class="sub-content">Once the player decides to stand with their hand or doubles down without busting, the dealer begins to draw cards.</p>
+                <p class="sub-content">The dealer will continue to draw cards until they either land on at least a soft 17 or bust, which then the program will determine the winner.</p>
+            </p>
+        </div>
+        <hr class="hr">
+        <div class="footer" style="font-size: 12px;">
+            <p style=>
+                <span style="color: rgb(100,255,218);">Email:</span> deepkalpana1@aol.com
+            </p>
+            <p>
+                This website was published using Github Pages
+            </p>
+        </div>
+    </body>
+</html>
