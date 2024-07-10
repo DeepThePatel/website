@@ -8,15 +8,20 @@
         <link rel="preconnect" href="https://rsms.me/">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <!--CSS-->
-        <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/body.css">
-        <link rel="stylesheet" href="styles/580.css">
+        <link rel="stylesheet" href="styles/achievements.css">
         <!--JavaScript-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js" defer></script>
+        <!--Open other webpages-->
+        <script>
+            function openHTML(destination) {
+                window.location.href = destination;
+            }
+        </script>
     </head>
     <body>
         <!--HEADER-->
@@ -45,33 +50,51 @@
                 </div>
             </div>
         </div>
-        <div class="introduction">
-            <p class ="name" style="margin-top:72px;">MART 580 Game Design Project</p>
-            <br>
-            <p class="date">SPRING 2019</p>
-            <br>
+
+        <!--Modal-->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
         </div>
 
-        <!--Resources-->
-        <div style="margin-bottom: -50px;">
-            <h5 class="title" style="margin-top: 42px;">RESOURCES</h5>
-            <p class="project-link"><a href="https://d9asty.itch.io/mart-380-project" target="_blank" rel="noopener noreferrer" title="https://d9asty.itch.io/mart-380-project">Play the MART 380 Video Game &#8599</a></p>
+        <div>
+            <div class="achievement">
+                <h1 class="title">University Degrees</h1>
+                <div class="imgs-container">
+                    <div class="img-item">
+                        <img class="img img-modal" src="images/bscs.png" width="350px" height="446px">
+                        <p id="download-bscs-degree" class="download-bscs-degree">View Certified PDF</p>
+                        <script>
+                            document.getElementById('download-bscs-degree').addEventListener('click', function() {
+                                window.open('BSCS_Diploma.pdf', '_blank');
+                            });
+                        </script>
+                    </div>
+                    <div class="img-item">
+                        <img class="img img-modal" src="images/ba.png" width="350px" height="446px">
+                        <p id="download-ba-degree" class="download-ba-degree">View Certified PDF</p>
+                        <script>
+                            document.getElementById('download-ba-degree').addEventListener('click', function() {
+                                window.open('BA_Diploma.pdf', '_blank');
+                            });
+                        </script>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <h1 class="title">National STEM Honor Society Internship Certificates</h1> -->
+            <div class="achievement">
+                <h1 class="title">Microsoft Certified C# Fundamentals Certificate</h1>
+                <div class="imgs-container">
+                    <div class="img-item">
+                        <img class="img img-modal" src="images/csharpfundamentals.png" width="611px" height="411px">
+                        <a href="https://www.freecodecamp.org/certification/d9asty/foundational-c-sharp-with-microsoft" target="_blank"><p class="download-pdf">Verify Certification</p></a>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
 
-        <!--Body-->
-        <div style="margin-bottom: 90px;">
-            <h5 class="title">LEARNING OUTCOMES</h5>
-            <ul>
-                <li>How to develop a game using the Unity 3D engine</li>
-                <li>Video game UX design</li>
-                <li>Creating 3D models using Cinema 4D</li>
-            </ul>
-            <br>
-            <br>
-            <h5 class="title">OVERVIEW</h5>
-            <p class="sub-content">This is a video game I individually created in my MART 380 (New Media Art) class. The objective of this game is to navigate through the three areas of the map and find the key in each area. Once all three keys have been found, the player will then have to find the hidden portal and jump through it to win the game. <br><br>This game was built and designed in Unity and programmed in C#. Unfortunately I do not have the original files and code anymore, but the game is still playable by clicking the link above.</p>
-            <br>
-        </div>
         <hr class="hr">
         <div class="footer" style="font-size: 12px;">
             <p style=>

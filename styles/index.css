@@ -32,6 +32,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
 .project-card {
     border-radius: 8px;
     background-color: rgba(110, 113, 223, 0);

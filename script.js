@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
  
-const pdfContainer = document.querySelector(".resume-section");
-
-
-
+const pdfContainer = document.querySelector(".resume-section"); 
+  
 //MODALS
 const galleryImages = document.querySelectorAll(".gallery img");
 const galleryModal = document.getElementById("myModal");
