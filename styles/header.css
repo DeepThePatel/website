@@ -193,7 +193,7 @@
     .header {
         flex-direction: column;
         width: 80%;
-        margin-left: -10px;
+        margin-left: 0px;
     }
 
     .header-background {
