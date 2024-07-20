@@ -15,7 +15,7 @@ body {
 /*For mobile purposes*/
 @media screen and (max-width: 400px) {
   body .header {
-    margin-left: 0;
+    margin-left: -100px;
   }
 }
 
