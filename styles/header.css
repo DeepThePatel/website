@@ -1,5 +1,19 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 20px 0px 10px;
+    top: 0;
+    background-color: rgb(16, 25, 45);
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .left-section {
     display: flex;
+    flex: 1;
     align-items: center;
 }
 
@@ -14,63 +28,14 @@
 }
 
 .right-section {
-    display: flex;
     flex: 1;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: center;
     align-items: center;
     /*transition: justify-content 0.5s ease;*/
-    max-width: 80%;
-    padding-right: 60px;
+    padding-right: 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-/* Adjust image sizes based on viewport width */
-@media screen and (max-width: 1200px) {
-    .right-section img {
-        height: auto;
-        max-width: 30px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .right-section img {
-        height: auto;
-        max-width: 28px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .right-section img {
-        height: auto;
-        max-width: 26px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .right-section img {
-        height: auto;
-        max-width: 24px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .right-section img {
-        height: auto;
-        max-width: 22px;
-    }
-}
-
-.header {
-    z-index: 1;
-    padding: 20px 0px 10px;
-    top: 0;
-    background-color: rgb(16, 25, 45);
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .github-link,
@@ -92,9 +57,10 @@
 }
 
 .resume-link {
+    height: 100%;
+    width: 100%;
     margin-left: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 0px 18px;
     border-style: solid;
     border-color: rgb(100,255,218);
     border: 2px solid rgb(100,255,218);
@@ -116,4 +82,120 @@
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        width: 100%;
+    }
+
+    .right-section img {
+        height: auto;
+        max-width: 30px;
+    }
+
+    .github-link,
+    .instagram-link,
+    .linkedin-link,
+    .achievements {
+        margin-left: 20px;
+    }
+
+    .resume-link {
+        height: 93%;
+        width: 93%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        width: 95%;
+    }
+
+    .right-section img {
+        height: auto;
+        max-width: 28px;
+    }
+
+    .github-link,
+    .instagram-link,
+    .linkedin-link,
+    .achievements {
+        margin-left: 18px;
+    }
+    
+    .resume-link {
+        height: 86%;
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        width: 90%;
+    }
+
+    .right-section img {
+        height: auto;
+        max-width: 26px;
+    }
+    
+    .github-link,
+    .instagram-link,
+    .linkedin-link,
+    .achievements {
+        margin-left: 16px;
+    }
+    
+    .resume-link {
+        height: 79%;
+        width: 79%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        width: 85%;
+    }    
+    
+    .right-section img {
+        height: auto;
+        max-width: 24px;
+    }
+        
+    .github-link,
+    .instagram-link,
+    .linkedin-link,
+    .achievements {
+        margin-left: 14px;
+    }
+    
+    .resume-link {
+        height: 72%;
+        width: 72%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .right-section img {
+        height: auto;
+        max-width: 22px;
+    }
+    
+    .github-link,
+    .instagram-link,
+    .linkedin-link,
+    .achievements {
+        margin-left: 12px;
+    }
+
+    .resume-link {
+        height: 85%;
+        width: 85%;
+    }
 }
