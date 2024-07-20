@@ -193,11 +193,39 @@
     }
 }
 
+@media screen and (max-width: 478px) {
+    .header {
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .header-background {
+        height: 135px;
+    }
+
+    .right-section img {
+        height: auto;
+        max-width: 22px;
+    }
+    
+    .github-link,
+    .instagram-link,
+    .linkedin-link,
+    .achievements {
+        margin-left: 12px;
+    }
+
+    .resume-link {
+        height: 85%;
+        width: 85%;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .header {
         flex-direction: column;
         width: 80%;
-        margin-left: 40px;
+        padding-left: 60px; /*For mobile*/
     }
 
     .header-background {
