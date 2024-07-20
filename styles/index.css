@@ -11,6 +11,10 @@
     font-size: 18px;
 }
 
+.name {
+    margin-top: -32px;
+}
+
 .name,
 .description {
     flex: 2 1 auto;

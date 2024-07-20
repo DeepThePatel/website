@@ -4,12 +4,12 @@
 }
 
 body {
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 50px;
-    background-color: rgb(16, 25, 45);
-    font-family: 'Inter', Arial;
-    color: rgb(100,255,218);
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 50px;
+  background-color: rgb(16, 25, 45);
+  font-family: 'Inter', Arial;
+  color: rgb(100,255,218);
 }
 
 .footer {
