@@ -100,6 +100,7 @@
 @media screen and (max-width: 1200px) {
     .header {
         width: 100%;
+        justify-content: center;
     }
 
     .right-section img {
@@ -123,6 +124,7 @@
 @media screen and (max-width: 1000px) {
     .header {
         width: 95%;
+        justify-content: center;
     }
 
     .right-section img {
@@ -146,6 +148,7 @@
 @media screen and (max-width: 800px) {
     .header {
         width: 90%;
+        justify-content: center;
     }
 
     .right-section img {
@@ -169,6 +172,7 @@
 @media screen and (max-width: 600px) {
     .header {
         width: 85%;
+        justify-content: center;
     }    
     
     .right-section img {
@@ -193,7 +197,7 @@
     .header {
         flex-direction: column;
         width: 80%;
-        margin-left: 0px;
+        justify-content: center;
     }
 
     .header-background {
