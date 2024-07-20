@@ -197,7 +197,6 @@
     .header {
         flex-direction: column;
         width: 80%;
-        justify-content: center;
     }
 
     .header-background {
