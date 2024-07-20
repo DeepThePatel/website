@@ -9,6 +9,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    transition: width 0.5s ease;
 }
 
 .left-section {
@@ -32,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*transition: justify-content 0.5s ease;*/
+    transition: justify-content 0.5s ease;
     padding-right: 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -179,9 +180,10 @@
 @media screen and (max-width: 400px) {
     .header {
         flex-direction: column;
+        margin-left: 0;
         width: 80%;
     }
-    
+
     .right-section img {
         height: auto;
         max-width: 22px;

@@ -12,6 +12,13 @@ body {
   color: rgb(100,255,218);
 }
 
+/*For mobile purposes*/
+@media screen and (max-width: 400px) {
+  body .header {
+    margin-left: 0;
+  }
+}
+
 .footer {
   color: rgb(148,163,184);
   font-size: 10px;
