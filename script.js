@@ -49,3 +49,12 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Gradient resize
+function resizeGradient() {
+    const size = Math.max(window.innerWidth, window.innerHeight) * 0.7;
+    document.documentElement.style.setProperty('--gradient-size', `${size}px`);
+}
+
+resizeGradient();
+window.addEventListener('resize', resizeGradient);

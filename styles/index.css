@@ -1,4 +1,6 @@
 .content {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     row-gap: 70px;
