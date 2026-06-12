@@ -40,11 +40,24 @@
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0px, 360px));
     gap: 20px;
 }
 
+@media screen and (max-width: 768px) {
+    .project-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-card {
+    max-width: 400px;
     border-radius: 8px;
     background-color: rgba(110, 113, 223, 0);
     transition: background-color 0.45s, transform 0.3s ease;

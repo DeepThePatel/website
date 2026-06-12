@@ -53,6 +53,8 @@ a:active {
     color: rgb(100,255,218);
     background-color: transparent;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.3s ease;
   }
 
 a:active {
@@ -60,8 +62,16 @@ a:active {
 }
 
 a:hover {
-    text-decoration: underline;
+    border-bottom-color: rgb(100,255,218);
+    text-decoration: none;
     cursor: pointer;
+}
+
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+    border-bottom: none;
 }
 
 .project-link {
