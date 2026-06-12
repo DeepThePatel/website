@@ -10,6 +10,7 @@
         <!--CSS-->
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/timeline.css">
         <link rel="stylesheet" href="styles/body.css">
         <link rel="stylesheet" href="styles/index.css">
         <!--JavaScript-->
@@ -53,13 +54,13 @@
         <div class="header-background"></div>
 
         <div class="content">
-            <div class="introduction">
+            <div class="introduction fade-in">
                 <h1 class="name">Deep Patel</h1>
                 <h3 class="description">Systems Developer/Programmer II</h3>
             </div>
 
             <!--About section-->
-            <div class="about">
+            <div class="about fade-in">
                 <h5 class="title">
                    ABOUT
                 </h5>
@@ -78,63 +79,64 @@
             </div>
 
             <!--Experience section-->
-            <div class="experience">
+            <div class="experience fade-in">
                 <h5 class="title">
-                   WORK EXPERIENCE
-                </h5>        
-                
-                <p class="experience-date">
-                    JUN 2025 - CURRENT
-                </p>
-                <p class="sub-content">
-                    Systems Developer/Programmer II @ <a href="https://ed.sc.gov/" target="_blank" rel="noopener noreferrer" title="SCDE Website">South Carolina Department of Education &#8599</a>
-                </p>
+                    WORK EXPERIENCE
+                </h5>
 
-                <p class="experience-date past-experience">
-                    FEB 2025 - JUN 2025
-                </p>
-                <p class="sub-content past-experience">
-                    AI Quality Assurance Analyst @ <a href="https://www.rws.com/" target="_blank" rel="noopener noreferrer" title="RWS Group's Website">RWS Group &#8599</a>
-                </p>
+                <div class="timeline">
 
-                <p class="experience-date past-experience">
-                    OCT 2024 - JUN 2025
-                </p>
-                <p class="sub-content past-experience">
-                    Prompt Engineer @ <a href="https://outlier.ai/" target="_blank" rel="noopener noreferrer" title="Outlier's Website">Outlier &#8599</a>
-                </p>
+                    <div class="tl-item current">
+                        <p class="experience-date">JUN 2025 - CURRENT</p>
+                        <p class="sub-content">
+                            Systems Developer/Programmer II @ <a href="https://ed.sc.gov/" target="_blank" rel="noopener noreferrer" title="SCDE Website">South Carolina Department of Education &#8599</a>
+                        </p>
+                    </div>
 
-                <p class="experience-date past-experience">
-                    FEB 2024 - JUN 2024
-                </p>
-                <p class="sub-content past-experience">
-                    Web & Tech Department Manager @ <a href="https://nstem.org/" target="_blank" rel="noopener noreferrer" title="NSTEM's Website">National STEM Honor Society &#8599</a>
-                </p>
+                    <div class="tl-item">
+                        <p class="experience-date past-experience">FEB 2025 - JUN 2025</p>
+                        <p class="sub-content past-experience">
+                            AI Quality Assurance Analyst @ <a href="https://www.rws.com/" target="_blank" rel="noopener noreferrer" title="RWS Group's Website">RWS Group &#8599</a>
+                        </p>
+                    </div>
 
-                <p class="experience-date past-experience" style="text-indent: 20px;">
-                    └── &nbsp;&nbsp;AUG 2023 - FEB 2024
-                </p>
-                <p class="sub-content past-experience" style="padding-left: 55px;">
-                    Media and Web & Tech intern
-                </p>
+                    <div class="tl-item">
+                        <p class="experience-date past-experience">OCT 2024 - JUN 2025</p>
+                        <p class="sub-content past-experience">
+                            Prompt Engineer @ <a href="https://outlier.ai/" target="_blank" rel="noopener noreferrer" title="Outlier's Website">Outlier &#8599</a>
+                        </p>
+                    </div>
 
-                <p class="experience-date past-experience">
-                    AUG 2018 - JUN 2023
-                </p>
-                <p class="sub-content past-experience">
-                    Nail Technician @ <a href="https://www.facebook.com/p/Unique-Nail-Spa-100063654939523/" target="_blank" rel="noopener noreferrer" title="Unique Nails Facebook Page">Unique Nails and Spa &#8599</a>
-                </p>
+                    <div class="tl-item">
+                        <p class="experience-date past-experience">FEB 2024 - JUN 2024</p>
+                        <p class="sub-content past-experience">
+                            Web & Tech Department Manager @ <a href="https://nstem.org/" target="_blank" rel="noopener noreferrer" title="NSTEM's Website">National STEM Honor Society &#8599</a>
+                        </p>
+                        <div class="tl-sub">
+                            <p class="experience-date past-experience">AUG 2023 - FEB 2024</p>
+                            <p class="sub-content past-experience">Media and Web & Tech intern</p>
+                        </div>
+                    </div>
 
-                <p class="experience-date past-experience">
-                    AUG 2014 - JUL 2018
-                </p>
-                <p class="sub-content past-experience">
-                    Front Desk Manager and Housekeeper @ Economy Inn
-                </p>
+                    <div class="tl-item">
+                        <p class="experience-date past-experience">AUG 2018 - JUN 2023</p>
+                        <p class="sub-content past-experience">
+                            Nail Technician @ <a href="https://www.facebook.com/p/Unique-Nail-Spa-100063654939523/" target="_blank" rel="noopener noreferrer" title="Unique Nails Facebook Page">Unique Nails and Spa &#8599</a>
+                        </p>
+                    </div>
+
+                    <div class="tl-item">
+                        <p class="experience-date past-experience">AUG 2014 - JUL 2018</p>
+                        <p class="sub-content past-experience">
+                            Front Desk Manager and Housekeeper @ Economy Inn
+                        </p>
+                    </div>
+
+                </div>
             </div>
 
             <!--Projects section-->
-            <div>
+            <div class="fade-in">
                 <h5 class="title">
                    PROJECTS
                 </h5>
@@ -210,7 +212,7 @@
         </div>
         <hr class="hr">
         <div class="footer" style="font-size: 12px;">
-            <p style=>
+            <p>
                 <span style="color: rgb(100,255,218);">Email:</span> deepkalpana1@aol.com
             </p>
             <p>

@@ -1,0 +1,43 @@
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    bottom: 12px;
+    width: 1px;
+    background: linear-gradient(to bottom, #00d4aa, rgba(0, 212, 170, 0.08));
+}
+
+.tl-item {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.tl-item::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(16, 25, 45);
+    border: 1.5px solid #00d4aa;
+}
+
+.tl-item.current::before {
+    background: #00d4aa;
+    box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+}
+
+.tl-sub {
+    margin-top: 8px;
+    margin-left: 14px;
+    padding-left: 14px;
+    border-left: 1px dashed rgba(0, 212, 170, 0.25);
+}

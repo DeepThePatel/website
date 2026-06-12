@@ -7,7 +7,8 @@ body {
   margin-top: 30px;
   margin-left: 40px;
   margin-right: 50px;
-  background-color: rgb(16, 25, 45);
+  /*background-color: rgb(16, 25, 45);*/
+  background-color: #0d1117;
   font-family: 'Inter', Arial;
   color: rgb(100,255,218);
 }
@@ -17,6 +18,17 @@ body {
   body .header {
     margin-left: -100px;
   }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .footer {
