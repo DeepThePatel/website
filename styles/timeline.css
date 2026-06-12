@@ -32,7 +32,13 @@
 
 .tl-item.current::before {
     background: #00d4aa;
-    box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+    /* box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15); */
+    animation: dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+    0%   { box-shadow: 0 0 0 0px rgba(0, 212, 170, 0.4); }
+    100% { box-shadow: 0 0 0 10px rgba(0, 212, 170, 0); }
 }
 
 .tl-sub {
