@@ -1,7 +1,7 @@
 .header {
     display: flex;
     flex-wrap: wrap;
-    z-index: 4;
+    z-index: 5;
     padding: 15px 0px 15px;
     top: 0;
     position: fixed;
@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index:3;
+    z-index:4;
     /* background-color: rgb(16, 25, 45); */
     background-color: rgba(13, 17, 23, 0.82);
     backdrop-filter: blur(12px);

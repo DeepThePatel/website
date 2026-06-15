@@ -15,7 +15,7 @@ if (galleryModal) {
 
     galleryImages.forEach(function (image) {
         image.addEventListener("click", function () {
-            galleryModal.style.display = "block";
+            galleryModal.style.display = "flex";
             galleryModalImage.src = this.src;
         });
     });
