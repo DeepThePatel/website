@@ -34,7 +34,7 @@ if (galleryModal) {
 
     imgModalImages.forEach(function (image) {
         image.addEventListener("click", function () {
-            galleryModal.style.display = "block";
+            galleryModal.style.display = "flex";
             imgModalModalImage.src = this.src;
         });
     });
