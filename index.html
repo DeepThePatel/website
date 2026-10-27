@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Patel</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="topbar"><a href="index.html" style="text-decoration:none;color:inherit">~/deep<b>-</b>patel</a><span style="display:flex;gap:8px"><button class="nav-toggle open-palette" type="button" aria-label="Open command palette">⌘K</button><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="side">menu</button></span></div>
+    <aside class="side" id="side" aria-label="Site navigation">
+      <a class="brand" href="index.html">~/deep<b>-</b>patel<small>Systems Developer / Programmer II</small></a>
+      <nav class="tree">
+        <div class="tree-h">Explorer</div>
+        <a href="index.html" aria-current="page"><span class="ic">◆</span>index.html</a>
+        <div class="indent sub">
+          <a href="index.html#about"><span class="ic">#</span>about</a>
+          <a href="index.html#experience"><span class="ic">#</span>experience</a>
+          <a href="index.html#work"><span class="ic">#</span>projects</a>
+        </div>
+        <a href="achievements.html"><span class="ic">★</span>achievements.html</a>
+        <div class="dir">▾ <b>projects/</b></div>
+        <div class="indent">
+          <a href="schedulerx.html"><span class="ic">▫</span>schedulerx.html</a>
+          <a href="ai.html"><span class="ic">▫</span>ai.html</a>
+          <a href="blackjack.html"><span class="ic">▫</span>blackjack.html</a>
+          <a href="camp-system.html"><span class="ic">▫</span>camp-system.html</a>
+          <a href="fantasy-rescue.html"><span class="ic">▫</span>fantasy-rescue.html</a>
+          <a href="580project.html"><span class="ic">▫</span>580project.html</a>
+        </div>
+      </nav>
+      <div class="side-foot">
+        <div class="row">
+          <a href="https://github.com/DeepThePatel" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://www.instagram.com/dc4.deep/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </div>
+        <div class="themes" role="group" aria-label="Accent color"><span>accent</span>
+          <button type="button" data-theme="teal" style="--c:#64ffda" aria-label="Teal" aria-pressed="true"></button>
+          <button type="button" data-theme="amber" style="--c:#ffb454" aria-label="Amber" aria-pressed="false"></button>
+          <button type="button" data-theme="violet" style="--c:#b79cff" aria-label="Violet" aria-pressed="false"></button>
+          <button type="button" data-theme="rose" style="--c:#ff7a9c" aria-label="Rose" aria-pressed="false"></button>
+        </div>
+        <button class="pal-btn open-palette" type="button"><span>Command palette</span><kbd>Ctrl K</kbd></button>
+        <a class="btn" href="DeepPatel_Resume.pdf">Resume</a>
+      </div>
+    </aside>
+    <div class="main">
+      <div class="tabbar"><span class="tab">index.html</span><span class="crumbs">~/deep-patel/index.html</span></div>
+    <main class="wrap">
+      <section class="hero">
+        <div class="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>deep@portfolio: ~</span></div>
+          <div class="term-body">
+            <p class="ln" style="--i:0"><span class="ps">$</span><span class="cmd">whoami</span></p>
+            <h1 class="out" style="--i:1">Deep Patel<em>_</em></h1>
+            <p class="ln" style="--i:2"><span class="ps">$</span><span class="cmd">cat role.txt</span></p>
+            <p class="out role" style="--i:3">Systems Developer / Programmer II</p>
+            <p class="ln" style="--i:4"><span class="ps">$</span><span class="cmd">head -n 1 about.md</span></p>
+            <p class="out lede" style="--i:5">I'm a systems developer with a focus in building robust data pipelines utilizing AI and cloud infrastructure.</p>
+            <p class="ln" style="--i:6"><span class="ps">$</span><span class="cmd">ls stack/</span></p>
+            <ul class="tags" style="--i:7"><li>AWS</li><li>Azure</li><li>Snowflake</li><li>Salesforce</li><li>Power BI</li><li>Data pipelines</li><li>Generative AI</li><li>Prompt engineering</li><li>JavaScript</li><li>WordPress</li><li>Airtable</li><li>React Native</li><li>C#</li><li>Python</li></ul>
+            <div id="termout" aria-live="polite"></div>
+            <label class="ln inline" style="--i:8;margin-top:22px"><span class="ps">$</span><input id="cmd" class="cmd-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type &quot;help&quot; and press enter" aria-label="Terminal command"></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec reveal" id="about">
+        <h2 class="sh"><span>//</span><em>01</em>about</h2>
+        <div class="about">
+          <p>I'm a systems developer with a focus in building robust data pipelines utilizing AI and cloud infrastructure. I take pride in building solutions where technical rigor meets real-world impact — from clean data models to interfaces that make complex information accessible.</p>
+          <p>I am currently working at the <strong>South Carolina Department of Education</strong>, where I design and develop data pipelines using AWS/Azure, Snowflake, Salesforce, and Power BI — modernizing how the state collects, validates, and surfaces education data, all in service of the department's mission to support the students, teachers, and communities of South Carolina.</p>
+          <p>Previously, I worked as a Prompt Engineer at <strong>Outlier</strong>, crafting training data and evaluation frameworks for generative AI models — work that sharpened my understanding of how large language models reason and fail. Before that, I led the web and tech team at <strong>NSTEM</strong>, where I mentored interns and drove full-stack development efforts using JavaScript, WordPress, and Airtable.</p>
+          <p>When I'm not head-first in technology, you can find me camping and hiking in the great outdoors, improving my fitness, taking roadtrips, or hunting down the best eateries around town!</p>
+        </div>
+      </section>
+
+      <section class="sec reveal" id="experience">
+        <h2 class="sh"><span>//</span><em>02</em>work experience</h2>
+        <ol class="log">
+          <li class="current">
+            <span class="when">Jun 2025 — Current</span><span class="head">HEAD</span>
+            <span class="what">Systems Developer/Programmer II</span>
+            <span class="at">@ <a href="https://ed.sc.gov/" target="_blank" rel="noopener noreferrer" title="SCDE Website">South Carolina Department of Education ↗</a></span>
+          </li>
+          <li>
+            <span class="when">Feb 2025 — Jun 2025</span>
+            <span class="what">AI Quality Assurance Analyst</span>
+            <span class="at">@ <a href="https://www.rws.com/" target="_blank" rel="noopener noreferrer" title="RWS Group's Website">RWS Group ↗</a></span>
+          </li>
+          <li>
+            <span class="when">Oct 2024 — Jun 2025</span>
+            <span class="what">Prompt Engineer</span>
+            <span class="at">@ <a href="https://outlier.ai/" target="_blank" rel="noopener noreferrer" title="Outlier's Website">Outlier ↗</a></span>
+          </li>
+          <li>
+            <span class="when">Feb 2024 — Jun 2024</span>
+            <span class="what">Web &amp; Tech Department Manager</span>
+            <span class="at">@ <a href="https://nstem.org/" target="_blank" rel="noopener noreferrer" title="NSTEM's Website">National STEM Honor Society ↗</a></span>
+            <div class="subrole">
+              <span class="when">Aug 2023 — Feb 2024</span>
+              <span class="what">Media and Web &amp; Tech intern</span>
+            </div>
+          </li>
+          <li>
+            <span class="when">Aug 2018 — Jun 2023</span>
+            <span class="what">Nail Technician</span>
+            <span class="at">@ <a href="https://www.facebook.com/p/Unique-Nail-Spa-100063654939523/" target="_blank" rel="noopener noreferrer" title="Unique Nails Facebook Page">Unique Nails and Spa ↗</a></span>
+          </li>
+          <li>
+            <span class="when">Aug 2014 — Jul 2018</span>
+            <span class="what">Front Desk Manager and Housekeeper</span>
+            <span class="at">@ Economy Inn</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="sec" id="work" style="padding-bottom:56px">
+        <h2 class="sh reveal"><span>//</span><em>03</em>projects</h2>
+        <div class="cards">
+          <a class="card reveal" href="schedulerx.html">
+            <div class="win-bar"><i></i><i></i><i></i><span>schedulerx.html</span></div>
+            <div class="shot"><img src="images/schedulerx.png" alt="SchedulerX" loading="lazy"></div>
+            <div class="txt"><h3>SchedulerX</h3><p>React-Native based lifestyle Android application</p><div class="meta">Fall 2023 — Spring 2024</div></div>
+          </a>
+          <a class="card reveal" href="ai.html">
+            <div class="win-bar"><i></i><i></i><i></i><span>ai.html</span></div>
+            <div class="shot"><img src="images/chip.png" alt="Artificial Intelligence Project" loading="lazy"></div>
+            <div class="txt"><h3>Artificial Intelligence Project</h3><p>Python/ML implementation of binary classification on image datasets</p><div class="meta">Fall 2023</div></div>
+          </a>
+          <a class="card reveal" href="blackjack.html">
+            <div class="win-bar"><i></i><i></i><i></i><span>blackjack.html</span></div>
+            <div class="shot"><img src="images/blackjack.jpg" alt="Blackjack" loading="lazy"></div>
+            <div class="txt"><h3>Blackjack</h3><p>C# .NET console-based blackjack card game</p><div class="meta">Summer 2024</div></div>
+          </a>
+          <a class="card reveal" href="camp-system.html">
+            <div class="win-bar"><i></i><i></i><i></i><span>camp-system.html</span></div>
+            <div class="shot"><img src="images/summer-camp.png" alt="Software Engineering Camp System Project" title="AI generated image by ChatGPT." loading="lazy"></div>
+            <div class="txt"><h3>Software Engineering Camp System Project</h3><p>JavaScript console-based summer camp system</p><div class="meta">Fall 2022</div></div>
+          </a>
+          <a class="card reveal" href="fantasy-rescue.html">
+            <div class="win-bar"><i></i><i></i><i></i><span>fantasy-rescue.html</span></div>
+            <div class="shot"><img src="images/fantasy-rescue.png" alt="Fantasy Rescue" loading="lazy"></div>
+            <div class="txt"><h3>Fantasy Rescue</h3><p>Game where player must overcome obstacle courses and find all the keys</p><div class="meta">Fall 2020</div></div>
+          </a>
+          <a class="card reveal" href="580project.html">
+            <div class="win-bar"><i></i><i></i><i></i><span>580project.html</span></div>
+            <div class="shot"><img src="images/380game.png" alt="Game Design Project" loading="lazy"></div>
+            <div class="txt"><h3>Game Design Project</h3><p>Game where player must navigate the map and find all the keys</p><div class="meta">Spring 2019</div></div>
+          </a>
+        </div>
+      </section>
+    </main>
+    </div>
+    <div class="status">
+      <div class="l"><span>⎇ main</span><span class="hide-s">Deep Patel</span><button class="sbtn open-palette hide-s" type="button">Ctrl K · commands</button></div>
+      <div class="r"><a href="mailto:deepkalpana1@aol.com">deepkalpana1@aol.com</a></div>
+    </div>
+</body>
+</html>

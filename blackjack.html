@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Patel — Blackjack</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="topbar"><a href="index.html" style="text-decoration:none;color:inherit">~/deep<b>-</b>patel</a><span style="display:flex;gap:8px"><button class="nav-toggle open-palette" type="button" aria-label="Open command palette">⌘K</button><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="side">menu</button></span></div>
+    <aside class="side" id="side" aria-label="Site navigation">
+      <a class="brand" href="index.html">~/deep<b>-</b>patel<small>Systems Developer / Programmer II</small></a>
+      <nav class="tree">
+        <div class="tree-h">Explorer</div>
+        <a href="index.html"><span class="ic">◆</span>index.html</a>
+        <div class="indent sub">
+          <a href="index.html#about"><span class="ic">#</span>about</a>
+          <a href="index.html#experience"><span class="ic">#</span>experience</a>
+          <a href="index.html#work"><span class="ic">#</span>projects</a>
+        </div>
+        <a href="achievements.html"><span class="ic">★</span>achievements.html</a>
+        <div class="dir">▾ <b>projects/</b></div>
+        <div class="indent">
+          <a href="schedulerx.html"><span class="ic">▫</span>schedulerx.html</a>
+          <a href="ai.html"><span class="ic">▫</span>ai.html</a>
+          <a href="blackjack.html" aria-current="page"><span class="ic">▫</span>blackjack.html</a>
+          <a href="camp-system.html"><span class="ic">▫</span>camp-system.html</a>
+          <a href="fantasy-rescue.html"><span class="ic">▫</span>fantasy-rescue.html</a>
+          <a href="580project.html"><span class="ic">▫</span>580project.html</a>
+        </div>
+      </nav>
+      <div class="side-foot">
+        <div class="row">
+          <a href="https://github.com/DeepThePatel" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://www.instagram.com/dc4.deep/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </div>
+        <div class="themes" role="group" aria-label="Accent color"><span>accent</span>
+          <button type="button" data-theme="teal" style="--c:#64ffda" aria-label="Teal" aria-pressed="true"></button>
+          <button type="button" data-theme="amber" style="--c:#ffb454" aria-label="Amber" aria-pressed="false"></button>
+          <button type="button" data-theme="violet" style="--c:#b79cff" aria-label="Violet" aria-pressed="false"></button>
+          <button type="button" data-theme="rose" style="--c:#ff7a9c" aria-label="Rose" aria-pressed="false"></button>
+        </div>
+        <button class="pal-btn open-palette" type="button"><span>Command palette</span><kbd>Ctrl K</kbd></button>
+        <a class="btn" href="Resume_DeepPatel.pdf">Resume</a>
+      </div>
+    </aside>
+    <div class="main">
+      <div class="tabbar"><span class="tab">blackjack.html</span><span class="crumbs">~/deep-patel/projects/blackjack.html</span></div>
+    <main class="wrap">
+      <a class="back" href="index.html#work">← cd ../projects</a>
+      <header class="ph reveal">
+        <div class="date">// Summer 2024</div>
+        <h1><span class="hash">#</span>Black<em>jack</em></h1>
+      </header>
+      <div class="links"><span class="lab">resources:</span><a class="chip" href="https://github.com/DeepThePatel/Blackjack/releases/tag/v1.4.2" target="_blank" rel="noopener noreferrer">Blackjack v1.4.2 ↗</a><a class="chip" href="https://github.com/DeepThePatel/Blackjack" target="_blank" rel="noopener noreferrer">GitHub Repository ↗</a><a class="chip" href="https://github.com/DeepThePatel/Blackjack/wiki/Software-Documentation" target="_blank" rel="noopener noreferrer">Software Documentation ↗</a></div>
+      <div class="project-grid">
+        <div class="project-main">
+        <section class="block reveal" id="overview">
+          <h2>Overview</h2>
+          <p class="lead">Console-based blackjack card game developed in the .NET framework and programmed in C#.</p>
+        </section>
+        <section class="block reveal" id="learning-outcomes">
+          <h2>Learning Outcomes</h2>
+          <ul class="list cols tight">
+            <li>How to create an application using the .NET framework</li>
+            <li>How to create an image to run as a containerized application using Docker</li>
+            <li>How to host a database on Amazon Web Services</li>
+            <li>How to manage a database on MS SQL Server Manager</li>
+            <li>How to securely store sensitive data in databases</li>
+            <li>How to execute SQL queries on a connected database in a .NET application</li>
+            <li>How to produce self-contained releases of an application</li>
+            <li>How to use the Tuple data structure</li>
+            <li>The use of C# Dictionaries</li>
+            <li>The use of methods to simplify code</li>
+            <li>Returning multiple values from a method</li>
+            <li>Use of the Visual Studio/VSCode debugging tool</li>
+            <li>Data parsing</li>
+            <li>Program flow control</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="gameplay">
+          <h2>Gameplay</h2>
+          <p>To launch the game:</p>
+          <ul class="list">
+            <li>Download the .ZIP folder in the <a href="https://github.com/DeepThePatel/Blackjack/releases" target="_blank" rel="noopener noreferrer" title="https://github.com/DeepThePatel/Blackjack/releases">latest release</a> for your respective OS</li>
+            <li>Unzip the folder in your desired location</li>
+            <li>Run the <span class="code">Blackjack</span> application</li>
+          </ul>
+          <p>Alternatively:</p>
+          <ul class="list">
+            <li>Clone the project into a folder on your computer</li>
+            <li>Open the project folder in a new terminal in Visual Studio</li>
+            <li>Run <span class="code">dotnet build</span></li>
+            <li>Then <span class="code">dotnet run</span></li>
+          </ul>
+        </section>
+        <section class="block reveal" id="main-menu">
+          <h2>Main Menu</h2>
+          <p>Upon entry, player will be notified of their initial balance of $5000.</p>
+          <p>The player will have the choice to pick from three (3) different casinos:</p>
+          <ul class="menu-table"><li>Las Vegas<span>Min. $50</span></li><li>Monte Carlo<span>Min. $200</span></li><li>Dubai<span>Min. $200</span></li></ul>
+          <p>Player will also have the option to quit <span class="code">(Q)</span> the game.</p>
+        </section>
+        <section class="block reveal" id="inside-the-casino">
+          <h2>Inside the Casino</h2>
+          <p>Once the preferred casino is selected, player is prompted to enter a bet within the accepted value range or to exit <span class="code">(Q)</span> the casino.</p>
+          <p>Once a valid bet is placed, the program begins to deal the player and dealer their hands in an alternating fashion.</p>
+        </section>
+        <section class="block reveal" id="insurance">
+          <h2>Insurance</h2>
+          <p>Once the cards are dealt and in the event that the dealer's first card is an Ace (where the player does NOT have a blackjack), the player has the ability to bet <span class="code">Insurance</span>.</p>
+          <ul class="list">
+            <li>The player is able to bet up to half of their original bet or <span class="code">0</span> if they do not wish to take insurance.</li>
+            <li>If insurance is taken and the player wins, they will receive their original bet and 2x their insurance.</li>
+            <li>If insurance is taken and the player loses, they will lose their original bet and their insurance.</li>
+            <li>If insurance is not taken, the game will continue.</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="blackjack">
+          <h2>Blackjack</h2>
+          <p>Before the program continues, it checks to see whether the player or the dealer have a blackjack.</p>
+          <ul class="list">
+            <li>If either the player or the dealer have a blackjack, the player will be notified and the round will end.</li>
+            <li>In the event that both the player and the dealer have a blackjack, the program will notify the player that there is a <span class="code">Push</span>.</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="the-player-s-turn">
+          <h2>The Player's Turn</h2>
+          <p>Once the cards are dealt, player is shown their hand, the total of their hand, and the dealer's hand.</p>
+          <p>They are then given the option to <span class="code">Hit</span> or <span class="code">Double</span> or <span class="code">Stay</span>. (Players may only double down once on their first turn. Players will NOT be able to double down after hitting a card)</p>
+          <p><span class="code">Hit</span> : A random card is drawn into the player's hand</p>
+          <p>If the player does not bust:</p>
+          <ul class="list">
+            <li>The sum of the player's hand is updated</li>
+            <li>Player is given the option to <span class="code">Hit</span> or <span class="code">Stay</span></li>
+            <li>This process is repeated until the player busts or decides to stay</li>
+          </ul>
+          <p>If the player busts:</p>
+          <ul class="list">
+            <li>Player is notified they busted along with the total of their hand</li>
+            <li>Player's balance is updated</li>
+            <li>Player is then redirected to beginning where they can choose to bet again or exit the casino</li>
+          </ul>
+          <p><span class="code">Split</span> : Player has the ability to split their hand should their initial drawn cards equal in value.</p>
+          <p><span class="code">Double</span> : Player will be given the opportunity to double their bet and draw only one (1) card.</p>
+          <p><span class="code">Stay</span> : Player does not draw a card and the program proceeds to play the dealer's hand</p>
+        </section>
+        <section class="block reveal" id="the-dealer-s-turn">
+          <h2>The Dealer's Turn</h2>
+          <p>Once the player decides to stand with their hand or doubles down without busting, the dealer begins to draw cards.</p>
+          <p>The dealer will continue to draw cards until they either land on at least a soft 17 or bust, which then the program will determine the winner.</p>
+        </section>
+        </div>
+        <nav class="outline" aria-label="On this page"><div class="tree-h">Outline</div><a href="#overview">overview</a><a href="#learning-outcomes">learning outcomes</a><a href="#gameplay">gameplay</a><a href="#main-menu">main menu</a><a href="#inside-the-casino">inside the casino</a><a href="#insurance">insurance</a><a href="#blackjack">blackjack</a><a href="#the-player-s-turn">the player's turn</a><a href="#the-dealer-s-turn">the dealer's turn</a></nav>
+      </div>
+    </main>
+    </div>
+    <div class="status">
+      <div class="l"><span>⎇ main</span><span class="hide-s">Deep Patel</span><button class="sbtn open-palette hide-s" type="button">Ctrl K · commands</button></div>
+      <div class="r"><a href="mailto:deepkalpana1@aol.com">deepkalpana1@aol.com</a><span class="hide-s">This website was published using Github Pages</span></div>
+    </div>
+</body>
+</html>

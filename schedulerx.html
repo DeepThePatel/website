@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Patel — SchedulerX</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="topbar"><a href="index.html" style="text-decoration:none;color:inherit">~/deep<b>-</b>patel</a><span style="display:flex;gap:8px"><button class="nav-toggle open-palette" type="button" aria-label="Open command palette">⌘K</button><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="side">menu</button></span></div>
+    <aside class="side" id="side" aria-label="Site navigation">
+      <a class="brand" href="index.html">~/deep<b>-</b>patel<small>Systems Developer / Programmer II</small></a>
+      <nav class="tree">
+        <div class="tree-h">Explorer</div>
+        <a href="index.html"><span class="ic">◆</span>index.html</a>
+        <div class="indent sub">
+          <a href="index.html#about"><span class="ic">#</span>about</a>
+          <a href="index.html#experience"><span class="ic">#</span>experience</a>
+          <a href="index.html#work"><span class="ic">#</span>projects</a>
+        </div>
+        <a href="achievements.html"><span class="ic">★</span>achievements.html</a>
+        <div class="dir">▾ <b>projects/</b></div>
+        <div class="indent">
+          <a href="schedulerx.html" aria-current="page"><span class="ic">▫</span>schedulerx.html</a>
+          <a href="ai.html"><span class="ic">▫</span>ai.html</a>
+          <a href="blackjack.html"><span class="ic">▫</span>blackjack.html</a>
+          <a href="camp-system.html"><span class="ic">▫</span>camp-system.html</a>
+          <a href="fantasy-rescue.html"><span class="ic">▫</span>fantasy-rescue.html</a>
+          <a href="580project.html"><span class="ic">▫</span>580project.html</a>
+        </div>
+      </nav>
+      <div class="side-foot">
+        <div class="row">
+          <a href="https://github.com/DeepThePatel" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://www.instagram.com/dc4.deep/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </div>
+        <div class="themes" role="group" aria-label="Accent color"><span>accent</span>
+          <button type="button" data-theme="teal" style="--c:#64ffda" aria-label="Teal" aria-pressed="true"></button>
+          <button type="button" data-theme="amber" style="--c:#ffb454" aria-label="Amber" aria-pressed="false"></button>
+          <button type="button" data-theme="violet" style="--c:#b79cff" aria-label="Violet" aria-pressed="false"></button>
+          <button type="button" data-theme="rose" style="--c:#ff7a9c" aria-label="Rose" aria-pressed="false"></button>
+        </div>
+        <button class="pal-btn open-palette" type="button"><span>Command palette</span><kbd>Ctrl K</kbd></button>
+        <a class="btn" href="Resume_DeepPatel.pdf">Resume</a>
+      </div>
+    </aside>
+    <div class="main">
+      <div class="tabbar"><span class="tab">schedulerx.html</span><span class="crumbs">~/deep-patel/projects/schedulerx.html</span></div>
+    <main class="wrap">
+      <a class="back" href="index.html#work">← cd ../projects</a>
+      <header class="ph reveal">
+        <div class="date">// Fall 2023 — Spring 2024</div>
+        <h1><span class="hash">#</span>Scheduler<em>X</em></h1>
+      </header>
+      <div class="links"><span class="lab">resources:</span><a class="chip" href="https://github.com/SCCapstone/CoolwithAnything/releases/tag/v1.0" target="_blank" rel="noopener noreferrer">SchedulerX v1.0 ↗</a><a class="chip" href="https://github.com/SCCapstone/CoolwithAnything" target="_blank" rel="noopener noreferrer">GitHub Repository ↗</a><a class="chip" href="https://sccapstone.github.io/CoolwithAnything/" target="_blank" rel="noopener noreferrer">SchedulerX Website ↗</a><a class="chip" href="https://sccapstone.github.io/CoolwithAnything/gallery.html" target="_blank" rel="noopener noreferrer">Gallery ↗</a></div>
+      <div class="project-grid">
+        <div class="project-main">
+        <section class="block reveal" id="demo-video">
+          <h2>Demo Video</h2>
+          <iframe class="video" src="https://www.youtube.com/embed/9xLHzvGBA7M" title="SchedulerX demo video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </section>
+        <section class="block reveal" id="overview">
+          <h2>Overview</h2>
+          <p class="lead">SchedulerX is a lifestyle Android app designed and produced by a team of five for our Senior Capstone Project. Using React-Native as the foundation of this app, it is aimed at helping users manage their schedules and track their fitness and nutrition goals.</p>
+          <p>The app is written in JavaScript using the React Native framework and uses Firebase for cloud storage and user authentication.</p>
+          <p>It has been tested through JUnit testing and behavioral testing using Detox. The demo video on how the tests run can be found <a href="https://www.youtube.com/watch?v=bpW2Dvu067M&amp;t=2s" target="_blank" rel="noopener noreferrer" title="Testing Demo Video">here</a>.</p>
+        </section>
+        <section class="block reveal" id="features">
+          <h2>Features</h2>
+          <ul class="list">
+            <li>Create and manage tasks on your personal calendar</li>
+            <li>Track task and fitness progress</li>
+            <li>Browse a selection of workouts and meals <span class="list-note">— Powered by <a href="https://api-ninjas.com/" target="_blank" rel="noopener noreferrer" title="API Ninjas Website">API Ninjas ↗</a></span></li>
+            <li>Personalize and share your own workouts and meals</li>
+            <li>Share tasks, meals and workouts</li>
+            <li>Switch between Dark and Light Mode Themes</li>
+            <li>Safely secure personal information in Firebase storage</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="key-responsibilities">
+          <h2>Key Responsibilities</h2>
+          <ul class="list">
+            <li>Connected app to backend (Firebase)</li>
+            <li>Established API connection to retrieve recipe/workout data</li>
+            <li>Tested app using JUnit and Behavioral tests (Detox)</li>
+            <li>Developed and designed app website</li>
+            <li>Designed and implemented app header</li>
+            <li>Implemented app settings:
+              <ul class="list">
+                <li>Ability to edit personal information connected to backend</li>
+                <li>Ability to create/edit payment methods and save to backend</li>
+                <li>Ability to switch between Light and Dark mode theme</li>
+              </ul>
+            </li>
+            <li>Managed team workflow by:
+              <ul class="list">
+                <li>Leading team SCRUM meetings</li>
+                <li>Managing GitHub project issues</li>
+                <li>Ensuring communication between the team</li>
+                <li>Maintaining the team's Trello board for project management</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="block reveal" id="learning-outcomes">
+          <h2>Learning Outcomes</h2>
+          <ul class="list cols tight">
+            <li>Mobile application development</li>
+            <li>How to plan a software project (Agile Methodologies)</li>
+            <li>Experience with the React-Native framework</li>
+            <li>JavaScript</li>
+            <li>JUnit and Behavioral testing (Detox)</li>
+            <li>Software debugging</li>
+            <li>Frontend development (UI and UX)</li>
+            <li>Backend development and management</li>
+            <li>How to integrate, connect to, and use APIs</li>
+            <li>Website development</li>
+            <li>Version control (Git)</li>
+            <li>SCRUM</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="developers">
+          <h2>Developers</h2>
+          <ul class="people"><li class="me">Deep Patel</li><li>Vu Nguyen</li><li>Ali Omer</li><li>Nick Rubino</li><li>Kayly Tran</li></ul>
+        </section>
+        </div>
+        <nav class="outline" aria-label="On this page"><div class="tree-h">Outline</div><a href="#demo-video">demo video</a><a href="#overview">overview</a><a href="#features">features</a><a href="#key-responsibilities">key responsibilities</a><a href="#learning-outcomes">learning outcomes</a><a href="#developers">developers</a></nav>
+      </div>
+    </main>
+    </div>
+    <div class="status">
+      <div class="l"><span>⎇ main</span><span class="hide-s">Deep Patel</span><button class="sbtn open-palette hide-s" type="button">Ctrl K · commands</button></div>
+      <div class="r"><a href="mailto:deepkalpana1@aol.com">deepkalpana1@aol.com</a><span class="hide-s">This website was published using Github Pages</span></div>
+    </div>
+</body>
+</html>

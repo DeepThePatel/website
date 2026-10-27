@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Patel — Fantasy Rescue</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="topbar"><a href="index.html" style="text-decoration:none;color:inherit">~/deep<b>-</b>patel</a><span style="display:flex;gap:8px"><button class="nav-toggle open-palette" type="button" aria-label="Open command palette">⌘K</button><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="side">menu</button></span></div>
+    <aside class="side" id="side" aria-label="Site navigation">
+      <a class="brand" href="index.html">~/deep<b>-</b>patel<small>Systems Developer / Programmer II</small></a>
+      <nav class="tree">
+        <div class="tree-h">Explorer</div>
+        <a href="index.html"><span class="ic">◆</span>index.html</a>
+        <div class="indent sub">
+          <a href="index.html#about"><span class="ic">#</span>about</a>
+          <a href="index.html#experience"><span class="ic">#</span>experience</a>
+          <a href="index.html#work"><span class="ic">#</span>projects</a>
+        </div>
+        <a href="achievements.html"><span class="ic">★</span>achievements.html</a>
+        <div class="dir">▾ <b>projects/</b></div>
+        <div class="indent">
+          <a href="schedulerx.html"><span class="ic">▫</span>schedulerx.html</a>
+          <a href="ai.html"><span class="ic">▫</span>ai.html</a>
+          <a href="blackjack.html"><span class="ic">▫</span>blackjack.html</a>
+          <a href="camp-system.html"><span class="ic">▫</span>camp-system.html</a>
+          <a href="fantasy-rescue.html" aria-current="page"><span class="ic">▫</span>fantasy-rescue.html</a>
+          <a href="580project.html"><span class="ic">▫</span>580project.html</a>
+        </div>
+      </nav>
+      <div class="side-foot">
+        <div class="row">
+          <a href="https://github.com/DeepThePatel" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://www.instagram.com/dc4.deep/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </div>
+        <div class="themes" role="group" aria-label="Accent color"><span>accent</span>
+          <button type="button" data-theme="teal" style="--c:#64ffda" aria-label="Teal" aria-pressed="true"></button>
+          <button type="button" data-theme="amber" style="--c:#ffb454" aria-label="Amber" aria-pressed="false"></button>
+          <button type="button" data-theme="violet" style="--c:#b79cff" aria-label="Violet" aria-pressed="false"></button>
+          <button type="button" data-theme="rose" style="--c:#ff7a9c" aria-label="Rose" aria-pressed="false"></button>
+        </div>
+        <button class="pal-btn open-palette" type="button"><span>Command palette</span><kbd>Ctrl K</kbd></button>
+        <a class="btn" href="Resume_DeepPatel.pdf">Resume</a>
+      </div>
+    </aside>
+    <div class="main">
+      <div class="tabbar"><span class="tab">fantasy-rescue.html</span><span class="crumbs">~/deep-patel/projects/fantasy-rescue.html</span></div>
+    <main class="wrap">
+      <a class="back" href="index.html#work">← cd ../projects</a>
+      <header class="ph reveal">
+        <div class="date">// Fall 2020</div>
+        <h1><span class="hash">#</span>Fantasy <em>Rescue</em></h1>
+      </header>
+      <div class="links"><span class="lab">resources:</span><a class="chip" href="https://d9asty.itch.io/fantasy-rescue" target="_blank" rel="noopener noreferrer">Play the Fantasy Rescue Game ↗</a><a class="chip" href="https://docs.google.com/document/d/1XUy0RRypOb4isEqq_rCdwYYt5IxfPEUN/edit?usp=sharing&amp;ouid=118415646538528176082&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Game Design Document ↗</a></div>
+      <div class="project-grid">
+        <div class="project-main">
+        <section class="block reveal" id="overview">
+          <h2>Overview</h2>
+          <p class="lead">This is a 3D video game that I created with a partner in my MART 581D (Video Game Design) class. This game was built and designed in Unity and Cinema 4D and programmed in C#. The objective of the game is to find keys to unlock new areas to beat the game.</p>
+          <p>This game was not completely finished due to time constraints and the class ending before the game was fully developed. Currently there are three areas that the player can explore: base camp, the desert, and ice peaks.</p>
+        </section>
+        <section class="block reveal" id="learning-outcomes">
+          <h2>Learning Outcomes</h2>
+          <ul class="list tight">
+            <li>How to develop a game using the Unity 3D engine</li>
+            <li>Video game UX design</li>
+            <li>Using C# for game development</li>
+            <li>Creating 3D models using Cinema 4D</li>
+            <li>How to develop a game design document</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="features">
+          <h2>Features</h2>
+          <ul class="list cols tight">
+            <li>Player Journal UI</li>
+            <li>Slippery platforms</li>
+            <li>Sliding surfaces</li>
+            <li>Moving platforms</li>
+            <li>On-Trigger Events</li>
+            <li>Inventory System</li>
+            <li>Sensitivity and Volume sliders</li>
+            <li>Dynamic lighting</li>
+            <li>Area audio</li>
+          </ul>
+        </section>
+        <section class="block reveal" id="gallery">
+          <h2>Gallery</h2>
+          <p class="note">Click images to enlarge</p>
+          <div class="gallery"><figure><img src="images/fantasy-rescue-screenshots/journal.png" alt="Journal UI" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/hub1.PNG" alt="Hub Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/hub2.PNG" alt="Hub Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/desert.PNG" alt="Desert Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/desert2.PNG" alt="Desert Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/ice.PNG" alt="Ice Peaks Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/ice2.PNG" alt="Ice Peaks Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/ice3.PNG" alt="Ice Peaks Screenshot" data-zoom loading="lazy"></figure><figure><img src="images/fantasy-rescue-screenshots/ice4.PNG" alt="Ice Peaks Screenshot" data-zoom loading="lazy"></figure></div>
+        </section>
+        </div>
+        <nav class="outline" aria-label="On this page"><div class="tree-h">Outline</div><a href="#overview">overview</a><a href="#learning-outcomes">learning outcomes</a><a href="#features">features</a><a href="#gallery">gallery</a></nav>
+      </div>
+    </main>
+    </div>
+    <div class="status">
+      <div class="l"><span>⎇ main</span><span class="hide-s">Deep Patel</span><button class="sbtn open-palette hide-s" type="button">Ctrl K · commands</button></div>
+      <div class="r"><a href="mailto:deepkalpana1@aol.com">deepkalpana1@aol.com</a><span class="hide-s">This website was published using Github Pages</span></div>
+    </div>
+</body>
+</html>
