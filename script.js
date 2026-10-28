@@ -379,7 +379,7 @@
     };
     var bjAskBet = function () {
       bj.phase = "bet";
-      line("bankroll: $" + bj.bank + "  \u2014  enter a bet (1-" + bj.bank + ") or 'quit'", "dim");
+      line("Balance: $" + bj.bank + "  \u2014  enter a bet (1-" + bj.bank + ") or 'quit'", "dim");
       bjPrompt("bet 1-" + bj.bank + " or quit");
     };
     var bjEnd = function (msg, delta, cls) {
