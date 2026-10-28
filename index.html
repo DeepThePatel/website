@@ -15,7 +15,7 @@
 <body>
     <div class="topbar"><a href="index.html" style="text-decoration:none;color:inherit">~/deep<b>-</b>patel</a><span style="display:flex;gap:8px"><button class="nav-toggle open-palette" type="button" aria-label="Open command palette">⌘K</button><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="side">menu</button></span></div>
     <aside class="side" id="side" aria-label="Site navigation">
-      <a class="brand" href="index.html">~/deep<b>-</b>patel<small>Systems Developer / Programmer II</small></a>
+      <div class="brand"><a class="logo" href="index.html" aria-label="Home" title="Home"></a><div class="brand-text"><span>~/deep<b>-</b>patel</span><small>Systems Developer / Programmer II</small></div></div>
       <nav class="tree">
         <div class="tree-h">Explorer</div>
         <a href="index.html" aria-current="page"><span class="ic">◆</span>index.html</a>
@@ -37,9 +37,10 @@
       </nav>
       <div class="side-foot">
         <div class="row">
-          <a href="https://github.com/DeepThePatel" target="_blank" rel="noopener noreferrer">github</a>
-          <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">linkedin</a>
-          <a href="https://www.instagram.com/dc4.deep/" target="_blank" rel="noopener noreferrer">instagram</a>
+          <p>Follow me: </p>
+          <a href="https://github.com/DeepThePatel" target="_blank" rel="noopener noreferrer" class="social" data-icon="github" aria-label="GitHub" title="GitHub"></a>
+          <a href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer" class="social" data-icon="linkedin" aria-label="LinkedIn" title="LinkedIn"></a>
+          <a href="https://www.instagram.com/dc4.deep/" target="_blank" rel="noopener noreferrer" class="social" data-icon="instagram" aria-label="Instagram" title="Instagram"></a>
         </div>
         <div class="themes" role="group" aria-label="Accent color"><span>accent</span>
           <button type="button" data-theme="teal" style="--c:#64ffda" aria-label="Teal" aria-pressed="true"></button>
@@ -86,38 +87,100 @@
         <h2 class="sh"><span>//</span><em>02</em>work experience</h2>
         <ol class="log">
           <li class="current">
-            <span class="when">Jun 2025 — Current</span><span class="head">HEAD</span>
-            <span class="what">Systems Developer/Programmer II</span>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-0"><span class="when">Jun 2025 — Current</span><span class="head">HEAD</span><span class="what">Systems Developer/Programmer II</span><span class="chev" aria-hidden="true"></span></button>
             <span class="at">@ <a href="https://ed.sc.gov/" target="_blank" rel="noopener noreferrer" title="SCDE Website">South Carolina Department of Education ↗</a></span>
+            <div class="exp-body" id="exp-0"><div class="exp-inner"><p>Leading a team of developers in developing and maintaining robust data pipelines and analytics solutions for the South Carolina Department of Education.</p>
+              <ul>
+                <li>Delivered an enterprise grade budgeting application that gave executive leadership unit-level visibility into an $8B+ budget with an embedded AI assistant</li>
+                <li>Leveraged Claude to accelerate program development cycles, streamlining testing and refinement processes for faster delivery</li>
+                <li>Utilized various resources from AWS and Azure for the purpose of modernizing existing systems and developing new data pipelines</li>
+                <li>Designed various dashboards using Power BI and populated them with data by querying SSMS and Snowflake data using SQL</li>
+                <li>Developed various Python scripts and SQL queries to ingest and transform data to support analytics and reporting needs that support the systems schools and educators across the State of South Carolina rely on every day</li>
+                <li>Presented technical material during department town hall meetings as well as various district members across the state in an effort to increase data confidence</li>
+              </ul>
+              <a class="exp-more" href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">View full description ↗</a>
+            </div>
+          </div>
           </li>
           <li>
-            <span class="when">Feb 2025 — Jun 2025</span>
-            <span class="what">AI Quality Assurance Analyst</span>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-1"><span class="when">Feb 2025 — Jun 2025</span><span class="what">AI Quality Assurance Analyst</span><span class="chev" aria-hidden="true"></span></button>
             <span class="at">@ <a href="https://www.rws.com/" target="_blank" rel="noopener noreferrer" title="RWS Group's Website">RWS Group ↗</a></span>
+            <div class="exp-body" id="exp-1"><div class="exp-inner"><p>Ensured and maintained the accuracy of an AI system's ability to correctly recognize and differentiate media content.</p>
+              <ul>
+                <li>Followed a set of guidelines to compare the quality of audio samples extracted from clips by AI systems</li>
+                <li>Evaluated and compared audio samples based on coverage, correctness, and faithfulness to determine which system is more effective</li>
+                <li>Evaluated a system's ability to recognize and differentiate sounds based on a video clip</li>
+              </ul>
+            </div>
+          </div>
           </li>
           <li>
-            <span class="when">Oct 2024 — Jun 2025</span>
-            <span class="what">Prompt Engineer</span>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-2"><span class="when">Oct 2024 — Jun 2025</span><span class="what">Prompt Engineer</span><span class="chev" aria-hidden="true"></span></button>
             <span class="at">@ <a href="https://outlier.ai/" target="_blank" rel="noopener noreferrer" title="Outlier's Website">Outlier ↗</a></span>
+            <div class="exp-body" id="exp-2"><div class="exp-inner"><p>Trained general and programming AI models to improve their performance and accuracy with adherence to a set of system instructions.</p>
+              <ul>
+                <li>Exemplified data annotation methods to maintain and improve LLM efficiency and quality</li>
+                <li>Crafted prompts to progressively train generative AI models to write code and adhere to a set of guidelines</li>
+                <li>Developed responses in natural language and algorithms in Java and Python to simulate model outputs and facilitate the progressive training of generative AI models</li>
+                <li>Designed System Instructions (SI) and evaluating multi-step prompt responses for coherence of the SI against a set of API functions</li>
+                <li>Collaborated with independent contractors and utilized process supervision to identify errors and gaps in model reasoning and offering guidance for better performance in both text and code reasoning</li>
+                <li>Participated as a L12 Senior Reviewer to finalize batches of assignments to ensure that they are perfect and ready to send to the client</li>
+              </ul>
+              <a class="exp-more" href="https://www.linkedin.com/in/deep-patel-a867a3170/" target="_blank" rel="noopener noreferrer">View full description ↗</a>
+            </div>
+          </div>
           </li>
           <li>
-            <span class="when">Feb 2024 — Jun 2024</span>
-            <span class="what">Web &amp; Tech Department Manager</span>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-3"><span class="when">Feb 2024 — Jun 2024</span><span class="what">Web &amp; Tech Department Manager</span><span class="chev" aria-hidden="true"></span></button>
             <span class="at">@ <a href="https://nstem.org/" target="_blank" rel="noopener noreferrer" title="NSTEM's Website">National STEM Honor Society ↗</a></span>
+            <div class="exp-body" id="exp-3"><div class="exp-inner"><p>Served as an intern and a manager for newer interns to develop and maintain the company's website.</p>
+              <ul>
+                <li>Supervised department interns, providing mentorship and leading weekly team meetings</li>
+                <li>Delivered comprehensive training to interns, enhancing their understanding of business procedures and WordPress capabilities</li>
+                <li>Managed and assigned department assignments</li>
+                <li>Participated in leadership meetings to discuss departmental strategies and improvements</li>
+              </ul>
+            </div>
+          </div>
             <div class="subrole">
-              <span class="when">Aug 2023 — Feb 2024</span>
-              <span class="what">Media and Web &amp; Tech intern</span>
+              <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-6"><span class="when">Aug 2023 — Feb 2024</span><span class="what">Media and Web &amp; Tech intern</span><span class="chev" aria-hidden="true"></span></button>
+              <div class="exp-body" id="exp-6"><div class="exp-inner">
+                <ul>
+                  <li>Maintained and optimized company website using WordPress, resolving technical issues and improving functionality</li>
+                  <li>Contributed to the full-stack development of the company website ensuring seamless integration by using: JavaScript, HTML/CSS, WordPress</li>
+                  <li>Assisted in the creation of the HR database using Airtable</li>
+                  <li>Produced and edited videos to be used for company outreach</li>
+                  <li>Designed digital graphics to be used as video thumbnails</li>
+                </ul>
+              </div>
+            </div>
             </div>
           </li>
           <li>
-            <span class="when">Aug 2018 — Jun 2023</span>
-            <span class="what">Nail Technician</span>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-4"><span class="when">Aug 2018 — Jun 2023</span><span class="what">Nail Technician</span><span class="chev" aria-hidden="true"></span></button>
             <span class="at">@ <a href="https://www.facebook.com/p/Unique-Nail-Spa-100063654939523/" target="_blank" rel="noopener noreferrer" title="Unique Nails Facebook Page">Unique Nails and Spa ↗</a></span>
+            <div class="exp-body" id="exp-4"><div class="exp-inner"><p>Provided a full range of nail care services, ensuring client satisfaction and maintaining high standards of hygiene and customer service.</p>
+              <ul>
+                <li>Delivered a full range of nail care services in a fast-paced salon environment</li>
+                <li>Built strong client relationships through attentive, personalized customer service, resulting in repeat business and referrals</li>
+                <li>Managed client communications via phone, handling inquiries and scheduling appointments efficiently</li>
+                <li>Processed cash and card transactions accurately, maintaining a balanced register</li>
+                <li>Executed end-of-day closing procedures including facility cleaning and workstation sanitation to uphold salon hygiene standards</li>
+              </ul>
+            </div>
+          </div>
           </li>
           <li>
-            <span class="when">Aug 2014 — Jul 2018</span>
-            <span class="what">Front Desk Manager and Housekeeper</span>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp-5"><span class="when">Aug 2014 — Jul 2018</span><span class="what">Front Desk Manager and Housekeeper</span><span class="chev" aria-hidden="true"></span></button>
             <span class="at">@ Economy Inn</span>
+            <div class="exp-body" id="exp-5"><div class="exp-inner"><p>Managed front desk operations and maintained cleanliness of the hotel premises, ensuring a positive guest experience.</p>
+              <ul>
+                <li>Provided excellent customer service to guests and over the phone, ensuring a positive experience and addressing inquiries promptly</li>
+                <li>Managed front desk operations, including check-in, check-out, and handling guest requests efficiently</li>
+                <li>Maintained cleanliness and orderliness of the hotel premises, ensuring a welcoming environment for guests</li>
+              </ul>
+            </div>
+          </div>
           </li>
         </ol>
       </section>

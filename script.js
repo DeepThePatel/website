@@ -218,6 +218,51 @@
     }
   });
 
+  /* ------------------------------------------------- experience accordion */
+  document.querySelectorAll(".exp-toggle").forEach(function (btn) {
+    var body = document.getElementById(btn.getAttribute("aria-controls"));
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (body) body.classList.toggle("open", open);
+    });
+  });
+
+  /* ------------------------------------------------------- typing intro */
+  var termBody = document.querySelector(".hero .term-body");
+  if (termBody && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+    var steps = Array.prototype.slice.call(termBody.querySelectorAll(":scope > [style*='--i']"));
+    termBody.classList.add("typing");
+    steps.forEach(function (el) { el.classList.add("pending"); });
+
+    var typeInto = function (el, node, text, delay, done) {
+      var n = 0;
+      node.textContent = "";
+      el.classList.add("typing-now");
+      (function tick() {
+        n++;
+        node.textContent = text.slice(0, n);
+        if (n < text.length) setTimeout(tick, delay + Math.random() * delay * 0.6);
+        else { el.classList.remove("typing-now"); done(); }
+      })();
+    };
+    var runStep = function (i) {
+      if (i >= steps.length) return;
+      var el = steps[i];
+      var next = function () { setTimeout(function () { runStep(i + 1); }, 260); };
+      el.classList.remove("pending");
+      var cmdNode = el.querySelector(".cmd");
+      if (cmdNode && !el.matches(".inline")) {
+        typeInto(el, cmdNode, cmdNode.textContent, 55, next);
+      } else if (!el.children.length && el.textContent.length) {
+        typeInto(el, el, el.textContent, 16, next);
+      } else {
+        next();
+      }
+    };
+    setTimeout(function () { runStep(0); }, 400);
+  }
+
   /* ----------------------------------------------------- interactive terminal */
   var input = document.getElementById("cmd");
   var out = document.getElementById("termout");
