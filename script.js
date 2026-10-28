@@ -19,7 +19,8 @@
   var EXT = {
     github: "https://github.com/DeepThePatel",
     linkedin: "https://www.linkedin.com/in/deep-patel-a867a3170/",
-    instagram: "https://www.instagram.com/dc4.deep/"
+    instagram: "https://www.instagram.com/dc4.deep/",
+    spotify: "https://open.spotify.com/user/1235850916"
   };
   var THEMES = { teal: "#64ffda", amber: "#ffb454", violet: "#b79cff", rose: "#ff7a9c" };
 
@@ -161,6 +162,7 @@
     a.push({ g: "Links", label: "GitHub", hint: "github.com/DeepThePatel", run: function () { ext(EXT.github); } });
     a.push({ g: "Links", label: "LinkedIn", hint: "linkedin.com", run: function () { ext(EXT.linkedin); } });
     a.push({ g: "Links", label: "Instagram", hint: "instagram.com", run: function () { ext(EXT.instagram); } });
+    a.push({ g: "Links", label: "Spotify", hint: "spotify.com", run: function () { ext(EXT.spotify); } });
     a.push({ g: "Links", label: "Email", hint: EMAIL, run: function () { go("mailto:" + EMAIL); } });
     ["light", "dark"].forEach(function (m) {
       a.push({ g: "Mode", label: "Mode: " + m, hint: "switch to " + m + " mode", run: function () { setMode(m); } });
@@ -456,7 +458,7 @@
           "about | experience   jump to a section",
           "achievements         open certifications",
           "contact              email address",
-          "github | linkedin | instagram",
+          "github | linkedin | instagram | spotify",
           "resume               open my resume",
           "blackjack            play a hand of blackjack",
           "theme <teal|amber|violet|rose|light|dark>",
@@ -482,6 +484,7 @@
       github: function () { linkLine("", EXT.github, EXT.github, true); ext(EXT.github); },
       linkedin: function () { linkLine("", EXT.linkedin, EXT.linkedin, true); ext(EXT.linkedin); },
       instagram: function () { linkLine("", EXT.instagram, EXT.instagram, true); ext(EXT.instagram); },
+      spotify: function () { linkLine("", EXT.spotify, EXT.spotify, true); ext(EXT.spotify); },
       resume: function () { line("opening resume …", "dim"); setTimeout(function () { go(resumeHref()); }, 250); },
       theme: function (arg) {
         if (setMode((arg || "").toLowerCase())) line(arg.toLowerCase() + " mode on", "dim");

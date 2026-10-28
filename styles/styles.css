@@ -83,11 +83,12 @@ a { color: inherit; }
 }
 .brand .logo { --icon: url(../images/logo.png); width: 34px; height: 34px; }
 .side-foot .row { align-items: center; }
-.side-foot .row a.social { width: 24px; height: 24px; }
-.side-foot .row a.social:hover { opacity: 0.75; }
+.side-foot .row a.social { width: 24px; height: 24px; transition: opacity 0.25s ease; }
+.side-foot .row a.social:hover { opacity: 0.55; }
 .side-foot .social[data-icon="github"] { --icon: url(../images/github.png); }
 .side-foot .social[data-icon="linkedin"] { --icon: url(../images/linkedin.png); }
 .side-foot .social[data-icon="instagram"] { --icon: url(../images/instagram.png); }
+.side-foot .social[data-icon="spotify"] { --icon: url(../images/spotify.png); }
 .brand-text { min-width: 0; }
 .brand-text > span { display: block; line-height: 20px; }
 .brand b { color: var(--accent); font-weight: 500; }
