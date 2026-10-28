@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('dp-mode')==='light')document.documentElement.setAttribute('data-mode','light');var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -47,6 +47,7 @@
           <button type="button" data-theme="amber" style="--c:#ffb454" aria-label="Amber" aria-pressed="false"></button>
           <button type="button" data-theme="violet" style="--c:#b79cff" aria-label="Violet" aria-pressed="false"></button>
           <button type="button" data-theme="rose" style="--c:#ff7a9c" aria-label="Rose" aria-pressed="false"></button>
+          <button type="button" class="mode-switch" role="switch" aria-checked="true" aria-label="Dark mode"><span class="knob"></span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7"/></g></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="currentColor"/></svg></button>
         </div>
         <button class="pal-btn open-palette" type="button"><span>Command palette</span><kbd>Ctrl K</kbd></button>
         <a class="btn" href="DeepPatel_Resume.pdf">Resume</a>
@@ -191,32 +192,32 @@
           <a class="card reveal" href="schedulerx.html">
             <div class="win-bar"><i></i><i></i><i></i><span>schedulerx.html</span></div>
             <div class="shot"><img src="images/schedulerx.png" alt="SchedulerX" loading="lazy"></div>
-            <div class="txt"><h3>SchedulerX</h3><p>React-Native based lifestyle Android application</p><div class="meta">Fall 2023 — Spring 2024</div></div>
+            <div class="txt"><h3>SchedulerX</h3><p>React-Native based lifestyle Android application</p><ul class="stack" aria-label="Tech stack"><li>React Native</li><li>JavaScript</li><li>Firebase</li></ul><div class="meta">Fall 2023 — Spring 2024</div></div>
           </a>
           <a class="card reveal" href="ai.html">
             <div class="win-bar"><i></i><i></i><i></i><span>ai.html</span></div>
             <div class="shot"><img src="images/chip.png" alt="Artificial Intelligence Project" loading="lazy"></div>
-            <div class="txt"><h3>Artificial Intelligence Project</h3><p>Python/ML implementation of binary classification on image datasets</p><div class="meta">Fall 2023</div></div>
+            <div class="txt"><h3>Artificial Intelligence Project</h3><p>Python/ML implementation of binary classification on image datasets</p><ul class="stack" aria-label="Tech stack"><li>Python</li><li>PyTorch</li><li>TensorFlow</li></ul><div class="meta">Fall 2023</div></div>
           </a>
           <a class="card reveal" href="blackjack.html">
             <div class="win-bar"><i></i><i></i><i></i><span>blackjack.html</span></div>
             <div class="shot"><img src="images/blackjack.jpg" alt="Blackjack" loading="lazy"></div>
-            <div class="txt"><h3>Blackjack</h3><p>C# .NET console-based blackjack card game</p><div class="meta">Summer 2024</div></div>
+            <div class="txt"><h3>Blackjack</h3><p>C# .NET console-based blackjack card game</p><ul class="stack" aria-label="Tech stack"><li>C#</li><li>.NET</li></ul><div class="meta">Summer 2024</div></div>
           </a>
           <a class="card reveal" href="camp-system.html">
             <div class="win-bar"><i></i><i></i><i></i><span>camp-system.html</span></div>
             <div class="shot"><img src="images/summer-camp.png" alt="Software Engineering Camp System Project" title="AI generated image by ChatGPT." loading="lazy"></div>
-            <div class="txt"><h3>Software Engineering Camp System Project</h3><p>JavaScript console-based summer camp system</p><div class="meta">Fall 2022</div></div>
+            <div class="txt"><h3>Software Engineering Camp System Project</h3><p>JavaScript console-based summer camp system</p><ul class="stack" aria-label="Tech stack"><li>JavaScript</li></ul><div class="meta">Fall 2022</div></div>
           </a>
           <a class="card reveal" href="fantasy-rescue.html">
             <div class="win-bar"><i></i><i></i><i></i><span>fantasy-rescue.html</span></div>
             <div class="shot"><img src="images/fantasy-rescue.png" alt="Fantasy Rescue" loading="lazy"></div>
-            <div class="txt"><h3>Fantasy Rescue</h3><p>Game where player must overcome obstacle courses and find all the keys</p><div class="meta">Fall 2020</div></div>
+            <div class="txt"><h3>Fantasy Rescue</h3><p>Game where player must overcome obstacle courses and find all the keys</p><ul class="stack" aria-label="Tech stack"><li>Unity</li><li>C#</li></ul><div class="meta">Fall 2020</div></div>
           </a>
           <a class="card reveal" href="580project.html">
             <div class="win-bar"><i></i><i></i><i></i><span>580project.html</span></div>
             <div class="shot"><img src="images/380game.png" alt="Game Design Project" loading="lazy"></div>
-            <div class="txt"><h3>Game Design Project</h3><p>Game where player must navigate the map and find all the keys</p><div class="meta">Spring 2019</div></div>
+            <div class="txt"><h3>Game Design Project</h3><p>Game where player must navigate the map and find all the keys</p><ul class="stack" aria-label="Tech stack"><li>Unity</li><li>C#</li></ul><div class="meta">Spring 2019</div></div>
           </a>
         </div>
       </section>

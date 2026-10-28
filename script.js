@@ -36,17 +36,49 @@
     if (name === "teal") document.documentElement.removeAttribute("data-theme");
     else document.documentElement.setAttribute("data-theme", name);
     try { localStorage.setItem("dp-theme", name); } catch (e) {}
-    document.querySelectorAll(".themes button").forEach(function (b) {
+    document.querySelectorAll(".themes button[data-theme]").forEach(function (b) {
       b.setAttribute("aria-pressed", b.dataset.theme === name ? "true" : "false");
     });
     return true;
   }
   var current = "teal";
   try { current = localStorage.getItem("dp-theme") || "teal"; } catch (e) {}
-  document.querySelectorAll(".themes button").forEach(function (b) {
+  document.querySelectorAll(".themes button[data-theme]").forEach(function (b) {
     b.addEventListener("click", function () { setTheme(b.dataset.theme); });
   });
   setTheme(THEMES[current] ? current : "teal");
+
+  /* ------------------------------------------------------ light / dark mode */
+  function setMode(mode) {
+    if (mode !== "light" && mode !== "dark") return false;
+    if (mode === "light") document.documentElement.setAttribute("data-mode", "light");
+    else document.documentElement.removeAttribute("data-mode");
+    try { localStorage.setItem("dp-mode", mode); } catch (e) {}
+    document.querySelectorAll(".mode-switch").forEach(function (b) {
+      b.setAttribute("aria-checked", mode === "dark" ? "true" : "false");
+    });
+    return true;
+  }
+  function currentMode() { return document.documentElement.getAttribute("data-mode") === "light" ? "light" : "dark"; }
+  setMode(currentMode());
+  document.querySelectorAll(".mode-switch").forEach(function (b) {
+    b.addEventListener("click", function () { setMode(currentMode() === "light" ? "dark" : "light"); });
+  });
+
+  /* ------------------------------------------------------- page transitions */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.addEventListener("pageshow", function () { document.body.classList.remove("leaving"); });
+  document.addEventListener("click", function (e) {
+    if (reduceMotion || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a || (a.target && a.target !== "_self") || a.hasAttribute("download")) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || !/\.html?$|\/$/.test(u.pathname)) return;
+    if (u.pathname === location.pathname && u.search === location.search) return;
+    e.preventDefault();
+    document.body.classList.add("leaving");
+    setTimeout(function () { window.location.href = u.href; }, 180);
+  });
 
   /* ----------------------------------------------------- sidebar toggle */
   var toggle = document.querySelector(".nav-toggle:not(.open-palette)");
@@ -130,6 +162,9 @@
     a.push({ g: "Links", label: "LinkedIn", hint: "linkedin.com", run: function () { ext(EXT.linkedin); } });
     a.push({ g: "Links", label: "Instagram", hint: "instagram.com", run: function () { ext(EXT.instagram); } });
     a.push({ g: "Links", label: "Email", hint: EMAIL, run: function () { go("mailto:" + EMAIL); } });
+    ["light", "dark"].forEach(function (m) {
+      a.push({ g: "Mode", label: "Mode: " + m, hint: "switch to " + m + " mode", run: function () { setMode(m); } });
+    });
     Object.keys(THEMES).forEach(function (t) {
       a.push({ g: "Accent color", label: "Theme: " + t, hint: THEMES[t], run: function () { setTheme(t); } });
     });
@@ -268,6 +303,7 @@
   var out = document.getElementById("termout");
   if (input && out) {
     var history = [], hi = 0;
+    var DEFAULT_PLACEHOLDER = input.placeholder;
 
     var line = function (text, cls) {
       var p = document.createElement("p");
@@ -305,6 +341,111 @@
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
+    /* ------------------------------------------------------------- blackjack */
+    var bj = null, bjBroke = false;
+    var SUITS = ["\u2660", "\u2665", "\u2666", "\u2663"];
+    var RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    var cardLine = function (label, cards, hideHole, total) {
+      var p = document.createElement("p");
+      p.className = "o";
+      p.appendChild(document.createTextNode(label));
+      cards.forEach(function (c, i) {
+        var s = document.createElement("span");
+        s.className = "card-ch" + (!(hideHole && i === 1) && (c.s === 1 || c.s === 2) ? " red" : "");
+        s.textContent = hideHole && i === 1 ? "[?]" : "[" + c.r + SUITS[c.s] + "]";
+        p.appendChild(s);
+        p.appendChild(document.createTextNode(" "));
+      });
+      if (total != null) p.appendChild(document.createTextNode(" = " + total));
+      out.appendChild(p);
+    };
+    var newShoe = function () {
+      var d = [];
+      for (var k = 0; k < 4; k++) for (var s = 0; s < 4; s++) for (var r = 0; r < 13; r++) d.push({ r: RANKS[r], s: s, v: r === 0 ? 11 : Math.min(r + 1, 10) });
+      for (var i = d.length - 1; i > 0; i--) { var j2 = Math.floor(Math.random() * (i + 1)); var t = d[i]; d[i] = d[j2]; d[j2] = t; }
+      return d;
+    };
+    var handTotal = function (h) {
+      var t = 0, aces = 0;
+      h.forEach(function (c) { t += c.v; if (c.r === "A") aces++; });
+      while (t > 21 && aces) { t -= 10; aces--; }
+      return t;
+    };
+    var draw = function () { if (bj.shoe.length < 15) bj.shoe = newShoe(); return bj.shoe.pop(); };
+    var bjPrompt = function (text) { input.placeholder = text; };
+    var showTable = function (hideHole) {
+      cardLine("dealer  ", bj.dealer, hideHole, hideHole ? null : handTotal(bj.dealer));
+      cardLine("you     ", bj.player, false, handTotal(bj.player));
+    };
+    var bjAskBet = function () {
+      bj.phase = "bet";
+      line("bankroll: $" + bj.bank + "  \u2014  enter a bet (1-" + bj.bank + ") or 'quit'", "dim");
+      bjPrompt("bet 1-" + bj.bank + " or quit");
+    };
+    var bjEnd = function (msg, delta, cls) {
+      bj.bank += delta;
+      line(msg + (delta ? "  (" + (delta > 0 ? "+" : "-") + "$" + Math.abs(delta) + ")" : ""), cls);
+      if (bj.bank <= 0) {
+        line("you're out of chips. game over \u2014 type 'blackjack' to play again.", "err");
+        bj = null; bjBroke = true; bjPrompt(DEFAULT_PLACEHOLDER);
+      } else bjAskBet();
+    };
+    var bjDealerPlay = function () {
+      while (handTotal(bj.dealer) < 17) bj.dealer.push(draw());
+      showTable(false);
+      var p = handTotal(bj.player), d = handTotal(bj.dealer);
+      if (d > 21) bjEnd("dealer busts \u2014 you win!", bj.bet, "ok");
+      else if (p > d) bjEnd("you win!", bj.bet, "ok");
+      else if (p < d) bjEnd("dealer wins.", -bj.bet, "err");
+      else bjEnd("push \u2014 bet returned.", 0, "dim");
+    };
+    var bjDeal = function (bet) {
+      bj.bet = bet; bj.phase = "play";
+      bj.player = [draw(), draw()]; bj.dealer = [draw(), draw()];
+      var pb = handTotal(bj.player) === 21, db = handTotal(bj.dealer) === 21;
+      if (pb || db) {
+        showTable(false);
+        if (pb && db) bjEnd("both have blackjack \u2014 push.", 0, "dim");
+        else if (pb) bjEnd("BLACKJACK! pays 3:2.", Math.floor(bet * 1.5), "ok");
+        else bjEnd("dealer has blackjack.", -bet, "err");
+        return;
+      }
+      showTable(true);
+      line("hit / stand" + (bj.player.length === 2 && bj.bank >= bet * 2 ? " / double" : ""), "dim");
+      bjPrompt("hit, stand" + (bj.bank >= bet * 2 ? ", double" : ""));
+    };
+    var bjStart = function () {
+      bj = { bank: 100, bet: 0, shoe: newShoe(), phase: "bet", player: [], dealer: [] };
+      line("\u2660\u2665 BLACKJACK \u2666\u2663  \u2014  dealer stands on 17, blackjack pays 3:2, double on first move.");
+      bjAskBet();
+    };
+    var bjHandle = function (cmd) {
+      var c = cmd.toLowerCase();
+      if (c === "quit" || c === "exit" || c === "q") {
+        line("cashed out with $" + bj.bank + ". thanks for playing!", "dim");
+        bj = null; bjPrompt(DEFAULT_PLACEHOLDER); return;
+      }
+      if (bj.phase === "bet") {
+        var n = parseInt(c, 10);
+        if (!/^\d+$/.test(c) || n < 1 || n > bj.bank) { line("enter a whole number from 1 to " + bj.bank + ", or 'quit'.", "err"); return; }
+        bjDeal(n); return;
+      }
+      if (c === "hit" || c === "h") {
+        bj.player.push(draw());
+        var t = handTotal(bj.player);
+        if (t > 21) { showTable(false); bjEnd("bust! you lose.", -bj.bet, "err"); }
+        else if (t === 21) { showTable(true); line("21!", "dim"); bjDealerPlay(); }
+        else { showTable(true); line("hit / stand", "dim"); bjPrompt("hit or stand"); }
+      } else if (c === "stand" || c === "s") {
+        bjDealerPlay();
+      } else if (c === "double" || c === "d") {
+        if (bj.player.length !== 2 || bj.bank < bj.bet * 2) { line("you can only double on your first move with enough chips.", "err"); return; }
+        bj.bet *= 2; bj.player.push(draw());
+        if (handTotal(bj.player) > 21) { showTable(false); bjEnd("bust! you lose.", -bj.bet, "err"); }
+        else bjDealerPlay();
+      } else line("type hit, stand" + (bj.player.length === 2 ? ", double" : "") + " or quit.", "err");
+    };
+
     var COMMANDS = {
       help: function () {
         [
@@ -317,7 +458,8 @@
           "contact              email address",
           "github | linkedin | instagram",
           "resume               open my resume",
-          "theme <teal|amber|violet|rose>",
+          "blackjack            play a hand of blackjack",
+          "theme <teal|amber|violet|rose|light|dark>",
           "clear                clear the screen"
         ].forEach(function (t) { line(t); });
         line("tip: Ctrl+K opens the command palette anywhere.", "dim");
@@ -342,9 +484,14 @@
       instagram: function () { linkLine("", EXT.instagram, EXT.instagram, true); ext(EXT.instagram); },
       resume: function () { line("opening resume …", "dim"); setTimeout(function () { go(resumeHref()); }, 250); },
       theme: function (arg) {
-        if (!setTheme((arg || "").toLowerCase())) line("theme: choose one of teal, amber, violet, rose", "err");
+        if (setMode((arg || "").toLowerCase())) line(arg.toLowerCase() + " mode on", "dim");
+        else if (!setTheme((arg || "").toLowerCase())) line("theme: choose one of teal, amber, violet, rose, light, dark", "err");
         else line("accent set to " + arg.toLowerCase(), "dim");
       },
+      blackjack: function () { if (bj) line("a game is already running — type quit to leave it.", "err"); else {
+        if (bjBroke) { while (out.children.length > 1) out.removeChild(out.firstChild); bjBroke = false; }
+        bjStart();
+      } },
       clear: function () { out.innerHTML = ""; }
     };
 
@@ -353,6 +500,11 @@
       if (!cmd) return;
       history.push(cmd); hi = history.length;
       if (cmd !== "clear") line("$ " + cmd, "echo");
+      if (bj && cmd.toLowerCase() !== "clear") {
+        bjHandle(cmd);
+        input.scrollIntoView({ block: "nearest" });
+        return;
+      }
       var parts = cmd.split(/\s+/);
       var name = parts[0].toLowerCase();
       var arg = parts.slice(1).join(" ");

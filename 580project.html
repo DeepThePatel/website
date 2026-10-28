@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+    <script>document.documentElement.classList.add('js');try{if(localStorage.getItem('dp-mode')==='light')document.documentElement.setAttribute('data-mode','light');var t=localStorage.getItem('dp-theme');if(t&&t!=='teal')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -46,6 +46,7 @@
           <button type="button" data-theme="amber" style="--c:#ffb454" aria-label="Amber" aria-pressed="false"></button>
           <button type="button" data-theme="violet" style="--c:#b79cff" aria-label="Violet" aria-pressed="false"></button>
           <button type="button" data-theme="rose" style="--c:#ff7a9c" aria-label="Rose" aria-pressed="false"></button>
+          <button type="button" class="mode-switch" role="switch" aria-checked="true" aria-label="Dark mode"><span class="knob"></span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7"/></g></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="currentColor"/></svg></button>
         </div>
         <button class="pal-btn open-palette" type="button"><span>Command palette</span><kbd>Ctrl K</kbd></button>
         <a class="btn" href="Resume_DeepPatel.pdf">Resume</a>
