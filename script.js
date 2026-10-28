@@ -89,6 +89,12 @@
       var open = side.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    document.addEventListener("click", function (e) {
+      if (!side.classList.contains("open")) return;
+      if (side.contains(e.target) || toggle.contains(e.target)) return;
+      side.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
     side.addEventListener("click", function (e) {
       var a = e.target.closest ? e.target.closest("a") : null;
       if (a) { side.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); }
