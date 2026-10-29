@@ -584,3 +584,19 @@ html[data-mode="light"] .pal-box { box-shadow: 0 30px 80px -20px rgba(15, 23, 42
 }
 @keyframes pagein { from { opacity: 0; } to { opacity: 1; } }
 html[data-mode="light"] #termout .card-ch.red { color: #c0392b; }
+
+/* ----------------------------------------------- dotted-gray card art (logos) */
+.card .shot.dots {
+  display: flex; align-items: center; justify-content: center; padding: 6% 9%;
+  background-color: #17181d;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.6px);
+  background-size: 44px 44px;
+}
+.card .shot.dots img { width: 100%; height: 100%; object-fit: contain; }
+
+/* "Coming soon" tag in a card's title bar, styled like the tech-stack chips */
+.win-bar .soon {
+  margin-left: auto; padding: 2px 9px; border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 999px; background: var(--accent-dim); color: var(--accent);
+  font-family: var(--mono); font-size: 11px; line-height: 1.6; white-space: nowrap;
+}
