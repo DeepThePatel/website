@@ -600,3 +600,12 @@ html[data-mode="light"] #termout .card-ch.red { color: #c0392b; }
   border-radius: 999px; background: var(--accent-dim); color: var(--accent);
   font-family: var(--mono); font-size: 11px; line-height: 1.6; white-space: nowrap;
 }
+
+/* sidebar entry for a project that has no page yet */
+.tree .soon-item { display: flex; gap: 8px; align-items: baseline; padding: 6px 12px; color: var(--muted); cursor: default; }
+.tree .soon-item .ic { width: 14px; flex: none; }
+.tree .soon-item .soon {
+  margin-left: auto; padding: 0 8px; border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 999px; background: var(--accent-dim); color: var(--accent);
+  font-size: 10px; line-height: 1.7; white-space: nowrap; align-self: center;
+}
