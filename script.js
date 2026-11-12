@@ -26,7 +26,7 @@
 
   function resumeHref() {
     var b = document.querySelector(".side-foot .btn");
-    return b ? b.getAttribute("href") : "Resume_DeepPatel.pdf";
+    return b ? b.getAttribute("href") : "DeepPatel_Resume.pdf";
   }
   function go(href) { window.location.href = href; }
   function ext(url) { window.open(url, "_blank", "noopener"); }
