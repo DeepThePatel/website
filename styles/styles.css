@@ -615,3 +615,6 @@ html[data-mode="light"] #termout .card-ch.red { color: #c0392b; }
   :root { --status: 36px; }
   .status { padding: 0 calc(28px + env(safe-area-inset-right, 0px)) 8px calc(28px + env(safe-area-inset-left, 0px)); }
 }
+
+/* leave room under the prompt so auto-scroll clears the fixed footer */
+.ln.inline { scroll-margin-bottom: calc(var(--status) + 28px); }

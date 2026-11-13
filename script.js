@@ -517,6 +517,14 @@
       clear: function () { out.innerHTML = ""; }
     };
 
+    /* keep the prompt (and the newest output above it) in view as the console grows */
+    var keepInView = function () {
+      var row = input.closest(".ln") || input;
+      var go = function () { row.scrollIntoView({ block: "nearest", behavior: "instant" }); };
+      go();
+      requestAnimationFrame(go);
+    };
+
     var exec = function (raw) {
       var cmd = raw.trim();
       if (!cmd) return;
@@ -524,7 +532,7 @@
       if (cmd !== "clear") line("$ " + cmd, "echo");
       if (bj && cmd.toLowerCase() !== "clear") {
         bjHandle(cmd);
-        input.scrollIntoView({ block: "nearest" });
+        keepInView();
         return;
       }
       var parts = cmd.split(/\s+/);
@@ -532,8 +540,7 @@
       var arg = parts.slice(1).join(" ");
       if (Object.prototype.hasOwnProperty.call(COMMANDS, name)) COMMANDS[name](arg);
       else line("command not found: " + name + " — type 'help'", "err");
-      var t = input.closest(".term-body");
-      if (t) t.scrollTop = t.scrollHeight;
+      if (name !== "about" && name !== "experience") keepInView();
     };
 
     input.addEventListener("keydown", function (e) {
