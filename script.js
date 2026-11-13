@@ -271,6 +271,19 @@
     });
   });
 
+  /* ------------------------------------------- long title -> "Team Lead" on narrow screens */
+  var narrow = window.matchMedia ? window.matchMedia("(max-width: 480px)") : null;
+  function applyTitles() {
+    document.querySelectorAll("[data-short]").forEach(function (el) {
+      el.textContent = narrow && narrow.matches ? el.getAttribute("data-short") : el.getAttribute("data-full");
+    });
+  }
+  applyTitles();
+  if (narrow) {
+    if (narrow.addEventListener) narrow.addEventListener("change", applyTitles);
+    else if (narrow.addListener) narrow.addListener(applyTitles);
+  }
+
   /* ------------------------------------------------------- typing intro */
   var termBody = document.querySelector(".hero .term-body");
   if (termBody && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
@@ -472,7 +485,7 @@
         ].forEach(function (t) { line(t); });
         line("tip: Ctrl+K opens the command palette anywhere.", "dim");
       },
-      whoami: function () { line("Deep Patel — Systems Developer / Programmer II"); },
+      whoami: function () { line("Deep Patel — " + (narrow && narrow.matches ? "Team Lead" : "AI & Emerging Technologies Team Lead")); },
       ls: function () { listProjects(); },
       projects: function () { listProjects(); },
       open: function (arg) {

@@ -69,7 +69,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 22px 18px 18px;
+  padding: 22px 24px 18px 18px;
   text-decoration: none;
   color: var(--white);
   font-size: 15px;
@@ -93,7 +93,7 @@ a { color: inherit; }
 .brand-text { min-width: 0; }
 .brand-text > span { display: block; line-height: 20px; }
 .brand b { color: var(--accent); font-weight: 500; }
-.brand small { display: block; margin-top: 2px; color: var(--muted); font-size: 10px; line-height: 12px; font-weight: 400; letter-spacing: 0; white-space: nowrap; }
+.brand small { display: block; margin-top: 2px; color: var(--muted); font-size: 9px; line-height: 12px; font-weight: 400; letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .tree { padding: 14px 10px 8px; }
 .tree-h {
@@ -608,4 +608,10 @@ html[data-mode="light"] #termout .card-ch.red { color: #c0392b; }
   margin-left: auto; padding: 0 8px; border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   border-radius: 999px; background: var(--accent-dim); color: var(--accent);
   font-size: 10px; line-height: 1.7; white-space: nowrap; align-self: center;
+}
+
+/* phones have rounded bottom corners: taller footer, text lifted and moved in from the edges */
+@media (max-width: 960px) {
+  :root { --status: 36px; }
+  .status { padding: 0 calc(28px + env(safe-area-inset-right, 0px)) 8px calc(28px + env(safe-area-inset-left, 0px)); }
 }
